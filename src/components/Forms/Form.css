@@ -1,0 +1,40 @@
+/* body {
+  background: url("../../images/book.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+} */
+.user {
+  background: url("../../images/book.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "kb3candystripesmedium";
+}
+@font-face {
+  font-family: "kb3candystripesmedium";
+  src: url("../../kb3candystripes-webfont.woff2") format("woff2"),
+    url("../../kb3candystripes-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.left-div h1 {
+  margin-left: 20%;
+  margin-top: 22%;
+  font-size: 50px;
+}
+.usernameform input {
+  position: absolute;
+  left: 55%;
+  bottom: 47%;
+  font-size: 32px;
+}
+.vector img {
+  cursor: pointer;
+  height: 160px;
+  width: 160;
+  margin-left: 65%;
+  margin-top: 5%;
+}
