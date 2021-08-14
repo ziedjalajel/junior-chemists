@@ -31,10 +31,11 @@
   bottom: 47%;
   font-size: 32px;
 }
-.vector img {
+.vector > img {
   cursor: pointer;
+  position: absolute;
   height: 160px;
   width: 160;
-  margin-left: 65%;
-  margin-top: 5%;
+  left: 65%;
+  bottom: 10%;
 }

@@ -1,29 +1,21 @@
-import { Route, Switch } from "react-router";
-
+import { io } from "socket.io-client";
+import { useEffect, useState } from "react";
 //components
-import UsernameForm from "./components/Forms/UsernameForm";
-import Questions from "./components/Questions/Questions";
-import Team from "./components/Teams/Team";
-import Home from "./components/Home/Home";
-import "./App.css";
+import Routes from "./components/Routes";
 
 function App() {
-  return (
-    <Switch>
-      <Route path="/quiz">
-        <Questions />
-      </Route>
-      <Route path="/user">
-        <UsernameForm />
-      </Route>
-      <Route path="/team">
-        <Team />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
-  );
+  const [socket, setSocket] = useState(null);
+  const username = "zied";
+  const room = "room1";
+  useEffect(() => {
+    setSocket(io("localhost:8000"));
+  }, []);
+  useEffect(() => {
+    if (socket) {
+    }
+  }, [socket]);
+
+  return <Routes socket={socket} />;
 }
 
 export default App;

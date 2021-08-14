@@ -1,0 +1,32 @@
+.pickexp {
+  background: url("../../images/pick.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.exp1 > img {
+  position: absolute;
+  height: 350px;
+  width: auto;
+  left: 25%;
+  top: 18%;
+  cursor: pointer;
+}
+.exp2 > img {
+  position: absolute;
+  height: 340px;
+  width: auto;
+  left: 45%;
+  top: 22%;
+  cursor: pointer;
+}
+.exp3 > img {
+  position: absolute;
+  height: 330px;
+  width: auto;
+  left: 65%;
+  top: 21.5%;
+  cursor: pointer;
+}

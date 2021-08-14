@@ -8,9 +8,11 @@ import PT from "../../images/pt.png";
 const Home = () => {
   return (
     <div className="home">
-      <div className="exp" type="button">
-        <img className="img1" src={DoorExp} />
-      </div>
+      <Link to="/choose-experiment">
+        <div className="exp" type="button">
+          <img className="img1" src={DoorExp} />
+        </div>
+      </Link>
       <img className="img3" src={PT} />
       <Link to="/team">
         <div className="quizes" type="button">
