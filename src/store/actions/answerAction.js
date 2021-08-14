@@ -5,7 +5,7 @@ import * as actionTypes from "./types";
 export const fetchAnswers = () => {
   return async (dispatch) => {
     try {
-      const res = await instance.get(`/answers/${answerId}`);
+      const res = await instance.get("/answers");
 
       dispatch({
         type: actionTypes.FETCH_ANSWERS,

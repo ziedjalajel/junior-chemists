@@ -1,9 +1,17 @@
 import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
-//components
+import BeatLoader from "react-spinners/BeatLoader";
 import Routes from "./components/Routes";
+import { useSelector } from "react-redux";
 
 function App() {
+  //ToDo  answers loading
+  const LoadingRooms = useSelector((state) => state.roomReducer.loading);
+  const LoadingQuestions = useSelector(
+    (state) => state.questionReducer.loading
+  );
+  const loadingChoices = useSelector((state) => state.choiceReducer.loading);
+
   const [socket, setSocket] = useState(null);
   const username = "zied";
   const room = "room1";
@@ -15,7 +23,15 @@ function App() {
     }
   }, [socket]);
 
-  return <Routes socket={socket} />;
+  return (
+    <div>
+      {LoadingRooms || LoadingQuestions || loadingChoices ? (
+        <BeatLoader size={10} />
+      ) : (
+        <Routes socket={socket} />
+      )}
+    </div>
+  );
 }
 
 export default App;

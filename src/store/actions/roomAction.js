@@ -5,7 +5,7 @@ import * as actionTypes from "./types";
 export const fetchRooms = () => {
   return async (dispatch) => {
     try {
-      const res = await instance.get(`/rooms/${roomId}`);
+      const res = await instance.get("/rooms");
 
       dispatch({
         type: actionTypes.FETCH_ROOMS,

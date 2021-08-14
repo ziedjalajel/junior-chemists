@@ -1,17 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 //styling
 import "./Form.css";
 import Go from "../../images/Picture2.png";
 import { useState } from "react";
 
 const UsernameForm = ({ socket }) => {
+  const history = useHistory();
   const [username, setUsername] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     socket.emit("joinRoom", { username, room: 1 });
     // dispatch(addChatUser(chat, +chatSlug));
-    // history.push(`/chats/${chatSlug}`);
+    history.push(`/rooms`);
   };
 
   return (

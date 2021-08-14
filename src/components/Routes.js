@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router";
 //components
 import UsernameForm from "./Forms/UsernameForm";
-import Questions from "./Questions/Questions";
+import Room from "./Questions/Room";
 import PickExp from "./Experiments/PickExp";
 import Team from "./Teams/Team";
 import Home from "./Home/Home";
@@ -10,7 +10,7 @@ const Routes = ({ socket }) => {
   return (
     <Switch>
       <Route path="/rooms">
-        <Questions />
+        <Room />
       </Route>
       <Route path="/user">
         <UsernameForm socket={socket} />
