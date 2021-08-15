@@ -7,8 +7,8 @@ import QuestionList from "./QuestionList";
 const Room = () => {
   return (
     <>
-      <QuestionList />
-      {/* <Questions /> */}
+      {/* <QuestionList /> */}
+      <Questions />
     </>
   );
 };

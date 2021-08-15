@@ -45,6 +45,14 @@
   /* height: auto; */
   height: 100%;
   font-family: "kb3candystripesmedium";
+  /* here */
+  /* border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 100%;
+  position: fixed;
+  margin-left: 40px; */
 }
 @font-face {
   font-family: "kb3candystripesmedium";
@@ -57,11 +65,11 @@
   margin-left: 15%;
   font-weight: bold;
   font-size: 32px;
-  margin-right: 10%;
-  margin-top: 8.5%;
+  margin-right: 18%;
+  margin-top: 3.5%;
 }
 .question > h6 {
   position: absolute;
   left: 84%;
-  top: 3%;
+  top: 0.5%;
 }
