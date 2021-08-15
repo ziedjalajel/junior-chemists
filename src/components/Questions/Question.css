@@ -60,3 +60,8 @@
   margin-right: 10%;
   margin-top: 8.5%;
 }
+.question > h6 {
+  position: absolute;
+  left: 84%;
+  top: 3%;
+}
