@@ -14,12 +14,12 @@ const reducer = (state = initialState, action) => {
         answers: action.payload,
         loading: false,
       };
-    // case actionTypes.ADD_ANSWER:
-    //   const { newAnswer } = action.payload;
-    //   return {
-    //     ...state,
-    //     answers: [...state.answers, newAnswer],
-    //   };
+    case actionTypes.ADD_ANSWER:
+      const { newAnswer } = action.payload;
+      return {
+        ...state,
+        answers: [...state.answers, newAnswer],
+      };
     case actionTypes.DETAIL_ANSWER:
       return {
         ...state,

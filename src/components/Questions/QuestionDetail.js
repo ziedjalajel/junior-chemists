@@ -3,7 +3,7 @@ import ChoiceDetail from "./ChoiceDetail";
 
 const QuestionDetail = ({ questions }) => {
   const choice = questions.choices.map((c) => (
-    <ChoiceDetail c={c} key={c.id} />
+    <ChoiceDetail c={c} key={c.id} questionId={questions.id} choiceId={c.id} />
   ));
   return (
     <div>

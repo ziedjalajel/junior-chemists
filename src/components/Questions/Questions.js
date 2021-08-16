@@ -1,22 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import ReactHtmlParser from "react-html-parser";
-import { ReactCountdownClock } from "react-countdown-clock";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 //components
 import QuestionDetail from "./QuestionDetail";
-import React from "react";
-import ReactDOM from "react-dom";
-import Countdown from "react-countdown";
 
 const Questions = () => {
-  //   const [seconds, setSeconds] = useState(10);
-  const dispatch = useDispatch();
-  //   var min = 1;
-  var max = 4;
-  var stop = 4; //Number of numbers to extract
-
-  var numbers = [];
-
   const questions = useSelector((state) => state.questionReducer.questions);
   const [seconds, setSeconds] = useState(5);
   const [number, setNumber] = useState(0);

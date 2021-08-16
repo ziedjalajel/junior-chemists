@@ -5,6 +5,7 @@ import Room from "./Questions/Room";
 import PickExp from "./Experiments/PickExp";
 import Team from "./Teams/Team";
 import Home from "./Home/Home";
+import Result from "./Results/Result";
 
 const Routes = ({ socket }) => {
   return (
@@ -20,6 +21,9 @@ const Routes = ({ socket }) => {
       </Route>
       <Route path="/choose-experiment">
         <PickExp />
+      </Route>
+      <Route path="/results">
+        <Result />
       </Route>
       <Route path="/">
         <Home />

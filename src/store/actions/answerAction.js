@@ -16,19 +16,21 @@ export const fetchAnswers = () => {
     }
   };
 };
-// export const addAnswer = (newAnswer) => {
-//   return async (dispatch) => {
-//     try {
-//       const res = await instance.post("/answers", { newAnswer });
-//       dispatch({
-//         type: actionTypes.ADD_ANSWER,
-//         payload: { newAnswer: res.data },
-//       });
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-// };
+export const addAnswer = (newAnswer, questionId, choiceId) => {
+  return async (dispatch) => {
+    try {
+      const res = await instance.post(`rooms/1/${questionId}/${choiceId}/1`, {
+        newAnswer,
+      });
+      dispatch({
+        type: actionTypes.ADD_ANSWER,
+        payload: { newAnswer: res.data },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
 export const answerDetail = (answerId) => {
   return async (dispatch) => {
     try {

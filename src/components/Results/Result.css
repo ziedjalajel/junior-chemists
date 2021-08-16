@@ -1,0 +1,44 @@
+.result {
+  background: url("../../images/tv.png");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  bottom: 2%;
+  font-family: "kb3candystripesmedium";
+}
+@font-face {
+  font-family: "kb3candystripesmedium";
+  src: url("../../kb3candystripes-webfont.woff2") format("woff2"),
+    url("../../kb3candystripes-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.first {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  background: linear-gradient(180deg, #bebfd7 0%, rgba(118, 122, 228, 0) 100%);
+  color: white;
+  bottom: 65%;
+  left: 30%;
+}
+.first > h1 {
+  position: absolute;
+  right: 55%;
+  align-items: center;
+}
+.second {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  background: linear-gradient(180deg, #bebfd7 0%, rgba(118, 122, 228, 0) 100%);
+  color: white;
+  bottom: 50%;
+  left: 30%;
+}
+.second > h1 {
+  position: absolute;
+  right: 55%;
+  align-items: center;
+}
