@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { io } from "socket.io-client";
+import { useEffect, useState } from "react";
+import BeatLoader from "react-spinners/BeatLoader";
+import Routes from "./components/Routes";
+import { useSelector } from "react-redux";
 
 function App() {
+  //ToDo  answers loading
+  const LoadingRooms = useSelector((state) => state.roomReducer.loading);
+  const LoadingQuestions = useSelector(
+    (state) => state.questionReducer.loading
+  );
+  const loadingChoices = useSelector((state) => state.choiceReducer.loading);
+
+  const [socket, setSocket] = useState(null);
+  const username = "zied";
+  const room = "room1";
+  useEffect(() => {
+    setSocket(io("localhost:8000"));
+  }, []);
+  useEffect(() => {
+    if (socket) {
+    }
+  }, [socket]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {LoadingRooms || LoadingQuestions || loadingChoices ? (
+        <BeatLoader size={10} />
+      ) : (
+        <Routes socket={socket} />
+      )}
     </div>
   );
 }

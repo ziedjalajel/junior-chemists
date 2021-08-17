@@ -1,0 +1,80 @@
+.pickexp {
+  background: url("../../images/pick.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.exp1 > img {
+  position: absolute;
+  height: 350px;
+  width: auto;
+  left: 25%;
+  top: 18%;
+  cursor: pointer;
+  transition: width 1s, transform 1s, background-color 1s;
+}
+.exp1 > img::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  width: 350px;
+  height: 100vh;
+}
+.exp1 > img:hover {
+  position: absolute;
+  left: 21%;
+  top: 10%;
+  transform: skewX(-5deg);
+  width: auto;
+  height: 59vh;
+}
+.exp2 > img {
+  position: absolute;
+  height: 340px;
+  width: auto;
+  left: 45%;
+  top: 22%;
+  cursor: pointer;
+  transition: width 1s, transform 1s, background-color 1s;
+}
+.exp2 > img::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  width: 350px;
+  height: 100vh;
+}
+.exp2 > img:hover {
+  position: absolute;
+  left: 42%;
+  top: 17%;
+  transform: skewX(-5deg);
+  width: auto;
+  height: 55vh;
+}
+.exp3 > img {
+  position: absolute;
+  height: 330px;
+  width: auto;
+  left: 65%;
+  top: 21.5%;
+  cursor: pointer;
+  transition: width 1s, transform 1s, background-color 1s;
+}
+.exp3 > img::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  width: 350px;
+  height: 100vh;
+}
+.exp3 > img:hover {
+  position: absolute;
+  left: 62%;
+  top: 18.5%;
+  transform: skewX(-5deg);
+  width: auto;
+  height: 51vh;
+}
