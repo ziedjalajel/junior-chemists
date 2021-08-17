@@ -42,24 +42,26 @@
   background-size: 100% 2em;
   position: absolute;
   width: 100%;
-  /* height: auto; */
   height: 100%;
-  font-family: "kb3candystripesmedium";
-  /* here */
-  /* border-left: 1px solid #ffaa9f;
+  font-family: "coo";
+}
+.lines {
+  border-left: 1px solid #ffaa9f;
   border-right: 1px solid #ffaa9f;
   width: 2px;
   float: left;
   height: 100%;
   position: fixed;
-  margin-left: 40px; */
+  margin-left: 14%;
+}
+
+@font-face {
+  font-family: "doodle";
+  src: url("../../IndieFlower-Regular.ttf");
 }
 @font-face {
-  font-family: "kb3candystripesmedium";
-  src: url("../../kb3candystripes-webfont.woff2") format("woff2"),
-    url("../../kb3candystripes-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "coo";
+  src: url("../../IndieFlower-Regular.ttf");
 }
 .question {
   margin-left: 15%;

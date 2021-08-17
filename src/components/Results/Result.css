@@ -42,3 +42,17 @@
   right: 55%;
   align-items: center;
 }
+.third {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  background: linear-gradient(180deg, #bebfd7 0%, rgba(118, 122, 228, 0) 100%);
+  color: white;
+  bottom: 35%;
+  left: 30%;
+}
+.third > h1 {
+  position: absolute;
+  right: 55%;
+  align-items: center;
+}

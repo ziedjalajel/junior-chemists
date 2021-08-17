@@ -6,10 +6,14 @@ import PickExp from "./Experiments/PickExp";
 import Team from "./Teams/Team";
 import Home from "./Home/Home";
 import Result from "./Results/Result";
+import Test from "./Teams/Test";
 
 const Routes = ({ socket }) => {
   return (
     <Switch>
+      <Route path="/test">
+        <Test />
+      </Route>
       <Route path="/rooms">
         <Room />
       </Route>

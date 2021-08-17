@@ -8,9 +8,11 @@ const Questions = () => {
   const [seconds, setSeconds] = useState(5);
   const [number, setNumber] = useState(0);
   const [question, setQuestion] = useState(null);
+  const [answers, setAnswers] = useState({});
 
   useEffect(() => {
     let myQuestion;
+    let myAnswers = [];
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000);
     } else {
@@ -18,20 +20,36 @@ const Questions = () => {
       if (myQuestion) {
         setSeconds(5);
         setQuestion(myQuestion);
-      } else setSeconds(-1);
+      } else {
+        for (const key in answers) {
+          myAnswers.push({
+            roomId: 1,
+            questionId: +key,
+            choiceId: answers[key],
+            userId: 1,
+          });
+        }
+        console.log(myAnswers);
+      }
     }
-  });
+  }, [seconds]);
 
   useEffect(() => {
     if (questions) setQuestion(questions.find((q) => q.id === questions[0].id));
   }, [questions]);
   if (!question) return <div></div>;
+  // console.log(answers);
   return (
     <>
       <form>
+        <div className="lines"></div>
         <div className="d">
           <div className="question">
-            <QuestionDetail questions={question} />
+            <QuestionDetail
+              questions={question}
+              answers={answers}
+              setAnswers={setAnswers}
+            />
             <h6>Time Left : {seconds}</h6>
           </div>
         </div>

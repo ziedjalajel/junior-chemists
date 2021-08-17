@@ -16,17 +16,70 @@
 }
 .img1 {
   position: absolute;
-  height: 545px;
-  width: 400px;
+  height: 550px;
+  width: 350px;
   left: 4%;
   top: 1px;
+  transform-origin: top left;
+  transition: width 1s, transform 1s, background-color 1s;
+}
+.img1::after {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  margin-top: -5px;
+  content: " ";
+  width: 20px;
+  height: 15vh;
+  background-color: black;
+  border-radius: 50%;
+}
+.img1:hover {
+  /* transform: skewX(-5deg); */
+  transform: skewY(55deg);
+  width: 8vw;
+  height: 73vh;
+
+  /* transform-origin: left; */
+}
+.inside1 {
+  position: absolute;
+  height: 546px;
+  width: 350px;
+  left: 4%;
 }
 .img2 {
   position: absolute;
-  height: 545px;
-  width: 400px;
+  height: 550px;
+  width: 350px;
   left: 70%;
   top: 1px;
+  transform-origin: top left;
+  transition: width 1s, transform 1s, background-color 1s;
+}
+.img2::after {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  margin-top: -5px;
+  content: " ";
+  width: 20px;
+  height: 15vh;
+  background-color: black;
+  border-radius: 50%;
+}
+.img2:hover {
+  transform: skewX(-55deg);
+  transform: skewY(55deg);
+  width: 8vw;
+  height: 73vh;
+  transform-origin: top left;
+}
+.inside2 {
+  position: absolute;
+  height: 546px;
+  width: 350px;
+  left: 70%;
 }
 .img3 {
   position: absolute;

@@ -1,15 +1,30 @@
 //components
 import ChoiceDetail from "./ChoiceDetail";
 
-const QuestionDetail = ({ questions }) => {
+const QuestionDetail = ({ questions, answers, setAnswers }) => {
   const choice = questions.choices.map((c) => (
-    <ChoiceDetail c={c} key={c.id} questionId={questions.id} choiceId={c.id} />
+    <div className="form-check">
+      <input
+        className="form-check-input"
+        type="radio"
+        name={questions.id}
+        value={c.id}
+        checked={answers[questions.id] === c.id}
+      />
+      <label className="form-check-label"> {c.text}</label>
+    </div>
   ));
   return (
     <div>
       <div>
         <p>{questions.text}</p>
-        <p>{choice}</p>
+        <div
+          onChange={(e) =>
+            setAnswers({ ...answers, [e.target.name]: +e.target.value })
+          }
+        >
+          {choice}
+        </div>
       </div>
       <br />
     </div>
