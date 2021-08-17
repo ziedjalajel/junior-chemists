@@ -38,7 +38,7 @@ const Questions = () => {
     if (questions) setQuestion(questions.find((q) => q.id === questions[0].id));
   }, [questions]);
   if (!question) return <div></div>;
-  // console.log(answers);
+
   return (
     <>
       <form>
@@ -50,7 +50,7 @@ const Questions = () => {
               answers={answers}
               setAnswers={setAnswers}
             />
-            <h6>Time Left : {seconds}</h6>
+            <h6>Time Left : {seconds} s</h6>
           </div>
         </div>
       </form>

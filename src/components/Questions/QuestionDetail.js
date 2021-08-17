@@ -10,6 +10,7 @@ const QuestionDetail = ({ questions, answers, setAnswers }) => {
         name={questions.id}
         value={c.id}
         checked={answers[questions.id] === c.id}
+        style={{ backgroundColor: "#A6A6A4" }}
       />
       <label className="form-check-label"> {c.text}</label>
     </div>
@@ -23,7 +24,9 @@ const QuestionDetail = ({ questions, answers, setAnswers }) => {
             setAnswers({ ...answers, [e.target.name]: +e.target.value })
           }
         >
-          {choice}
+          <br />
+          <br />
+          <div className="choice">{choice}</div>
         </div>
       </div>
       <br />

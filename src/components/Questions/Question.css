@@ -75,3 +75,28 @@
   left: 84%;
   top: 0.5%;
 }
+.form-check {
+  padding-bottom: 15px;
+}
+.form-check:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(181, 234, 234, 0.7) 0%,
+    rgba(181, 234, 234, 0.7) 100%
+  );
+  font-weight: bold;
+  width: 18vw;
+  color: #a6a6a4;
+  border-radius: 5px;
+}
+.choice {
+  margin-left: 1em;
+}
+inputform-check-input {
+  height: 20px;
+  width: 20px;
+  background: #a6a6a4;
+  background-color: #a6a6a4;
+  color: #a6a6a4;
+  color-adjust: #a6a6a4;
+}
