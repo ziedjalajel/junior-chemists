@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router";
 import Titration from "./Experiments/TitrationExp";
 import UsernameForm from "./Forms/UsernameForm";
 import PickExp from "./Experiments/PickExp";
+import Explosion from "./Experiments/NaExp";
 import Result from "./Results/Result";
 import Room from "./Questions/Room";
 import Team from "./Teams/Team";
@@ -27,12 +28,16 @@ const Routes = ({ socket }) => {
       <Route path="/choose-experiment">
         <PickExp />
       </Route>
+      <Route path="/sodium-exp">
+        <Explosion />
+      </Route>
       <Route path="/results">
         <Result />
       </Route>
       <Route path="/titration">
         <Titration />
       </Route>
+
       <Route path="/">
         <Home />
       </Route>

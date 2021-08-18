@@ -14,9 +14,11 @@ const PickExp = () => {
           <img src={E1} />
         </div>
       </Link>
-      <div className="exp2" type="button">
-        <img src={E2} />
-      </div>
+      <Link to="/sodium-exp">
+        <div className="exp2" type="button">
+          <img src={E2} />
+        </div>
+      </Link>
       <div className="exp3" type="button">
         <img src={E3} />
       </div>

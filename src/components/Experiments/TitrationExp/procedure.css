@@ -197,23 +197,23 @@
 .procedure {
   font-family: "doodle";
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   position: absolute;
   text-align: center;
   left: 5%;
   right: 5%;
-  top: 75.5%;
+  top: 68%;
   width: 90%;
   animation: procedure 5s linear 1 both;
   animation-delay: 25s;
 }
 @keyframes procedure {
   0% {
-    transform: translateY(-40%);
+    transform: translateY(-25%);
     visibility: hidden;
   }
   100% {
-    transform: translateY(-25%);
+    transform: translateY(-2%);
     visibility: visible;
   }
 }
