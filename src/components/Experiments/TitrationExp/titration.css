@@ -40,7 +40,9 @@
 .pph {
   position: absolute;
   left: 51%;
+  font-weight: bold;
   top: 63.5%;
+  font-size: medium;
   z-index: 1;
   font-family: "doodle";
 }
@@ -54,7 +56,9 @@
   position: absolute;
   left: 59%;
   top: 63.5%;
+  font-size: medium;
   z-index: 1;
+  font-weight: bold;
   font-family: "doodle";
 }
 .p {
@@ -445,4 +449,16 @@
     transform: translateY(70%);
     visibility: hidden;
   }
+}
+.btn-outline-dark {
+  position: absolute;
+  top: 68.5%;
+  left: 10%;
+  z-index: 1;
+  font-family: "doodle";
+  height: 40px;
+}
+.Repeats {
+  font-weight: bolder;
+  font-size: large;
 }

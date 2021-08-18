@@ -25,8 +25,14 @@ import dropb2 from "./images/drop.png";
 import Procedure from "./Procedure";
 
 const Titration = () => {
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <>
+      <button className="btn btn-outline-dark" onClick={refreshPage}>
+        <p className="Repeats">Repeat</p>
+      </button>
       <div className="Exp1">
         <img src={burette_stand} alt="" className="burette_stand" />
         <img src={flask} alt="" className="flask" />

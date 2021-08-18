@@ -1,0 +1,101 @@
+.introNa {
+  font-family: "doodle";
+  font-size: 3em;
+  font-weight: bolder;
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  left: 35%;
+  animation: introNa 4s linear 1 both;
+  animation-delay: 1s;
+}
+@keyframes introNa {
+  0% {
+    transform: translateY(25%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.NaProc1 {
+  font-family: "doodle";
+  font-size: 4em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 31%;
+  animation: NaProc1 2s linear 1 both;
+  animation-delay: 5.5s;
+}
+@keyframes NaProc1 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.NaProc2 {
+  font-family: "doodle";
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  animation: NaProc2 2s linear 1 both;
+  animation-delay: 7.7s;
+}
+@keyframes NaProc2 {
+  0% {
+    transform: translateY(-80%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-40%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.NaProc3 {
+  font-family: "doodle";
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  animation: NaProc3 2s linear 1 both;
+  animation-delay: 7.7s;
+}
+@keyframes NaProc3 {
+  0% {
+    transform: translateY(-80%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-40%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.swal2-popup {
+  font-size: 1.6rem !important;
+  font-family: "doodle" !important;
+}
