@@ -1,18 +1,35 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { FaRegComment } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+
+import { addAnswer } from "../../store/actions/answerAction";
 //components
 import QuestionDetail from "./QuestionDetail";
 
-const Questions = () => {
+const Questions = ({ user, socket }) => {
   const questions = useSelector((state) => state.questionReducer.questions);
   const [seconds, setSeconds] = useState(5);
   const [number, setNumber] = useState(0);
   const [question, setQuestion] = useState(null);
   const [answers, setAnswers] = useState({});
-
+  const dispatch = useDispatch();
+  const a = user;
+  // console.log(a);
+  // console.log(socket.id);
+  let usersocket;
+  const [room, setRoom] = useState({});
+  const [myUser, setmyUser] = useState(null);
   useEffect(() => {
     let myQuestion;
     let myAnswers = [];
+
+    socket.on("startRoom", (u) => {
+      setRoom(u);
+    });
+    socket.on("newUser", (u) => {
+      setmyUser(u);
+      console.log(u);
+    });
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000);
     } else {
@@ -23,13 +40,17 @@ const Questions = () => {
       } else {
         for (const key in answers) {
           myAnswers.push({
-            roomId: 1,
+            roomId: room.myRoom.id,
             questionId: +key,
             choiceId: answers[key],
-            userId: 1,
+            userId: myUser.id,
           });
         }
+        myAnswers.map((a) =>
+          dispatch(addAnswer(a.roomId, a.questionId, a.choiceId, a.userId))
+        );
         console.log(myAnswers);
+        console.log(usersocket);
       }
     }
   }, [seconds]);

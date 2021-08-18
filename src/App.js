@@ -13,8 +13,7 @@ function App() {
   const loadingChoices = useSelector((state) => state.choiceReducer.loading);
 
   const [socket, setSocket] = useState(null);
-  const username = "zied";
-  const room = "room1";
+
   useEffect(() => {
     setSocket(io("localhost:8000"));
   }, []);

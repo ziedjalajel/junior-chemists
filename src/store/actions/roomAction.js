@@ -16,19 +16,19 @@ export const fetchRooms = () => {
     }
   };
 };
-// export const addRoom = (newRoom) => {
-//   return async (dispatch) => {
-//     try {
-//       const res = await instance.post("/rooms", { newRoom });
-//       dispatch({
-//         type: actionTypes.ADD_ROOM,
-//         payload: { newRoom: res.data },
-//       });
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-// };
+export const addRoom = () => {
+  return async (dispatch) => {
+    try {
+      const res = await instance.post("/rooms");
+      dispatch({
+        type: actionTypes.ADD_ROOM,
+        payload: res.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
 export const roomDetail = (roomId) => {
   return async (dispatch) => {
     try {
