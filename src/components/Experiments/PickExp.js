@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 //styling
 import "./Exp.css";
 import E1 from "../../images/exp1.png";
@@ -7,9 +8,12 @@ import E3 from "../../images/exp3.png";
 const PickExp = () => {
   return (
     <div className="pickexp">
-      <div className="exp1" type="button">
-        <img src={E1} />
-      </div>
+      {" "}
+      <Link to="/titration">
+        <div className="exp1" type="button">
+          <img src={E1} />
+        </div>
+      </Link>
       <div className="exp2" type="button">
         <img src={E2} />
       </div>

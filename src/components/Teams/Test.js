@@ -1,13 +1,11 @@
-import Lab from "../../images/lab.jpg";
+//styling
 import "./Test.css";
 
 const Test = () => {
   return (
     <figure className="book">
       <ul className="hardcover_front">
-        <li>
-          <img src={Lab} alt="" width="100%" height="100%" />
-        </li>
+        <li></li>
         <li></li>
       </ul>
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 //styling
 import "./team.css";
 import "./Test.css";
-import Random from "../../images/book1.png";
+
 import Private from "../../images/book2.png";
 import Dht from "../../images/DhT.png";
 

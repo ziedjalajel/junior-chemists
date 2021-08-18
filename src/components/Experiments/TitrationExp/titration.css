@@ -1,0 +1,438 @@
+.Exp1 {
+  background: url("../../../images/Lab1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.burette_stand {
+  position: absolute;
+  height: 550px;
+  left: 17.5%;
+}
+.flask {
+  position: absolute;
+  height: 150px;
+  left: 30.6%;
+  top: 35.68%;
+}
+.f-l {
+  position: absolute;
+  height: 265px;
+  left: 26.9%;
+  top: 28%;
+}
+.pp {
+  position: absolute;
+  height: 265px;
+  left: 45%;
+  top: 37.7%;
+}
+.pph {
+  position: absolute;
+  left: 51%;
+  top: 63.5%;
+  z-index: 1;
+}
+.mo {
+  position: absolute;
+  height: 265px;
+  left: 53%;
+  top: 37.7%;
+}
+.moh {
+  position: absolute;
+  left: 59%;
+  top: 63.5%;
+  z-index: 1;
+}
+.p {
+  position: absolute;
+  height: 245px;
+  left: 45.65%;
+  top: 39.6%;
+  border-radius: 5%;
+}
+.m {
+  position: absolute;
+  height: 245px;
+  left: 53.66%;
+  top: 39.4%;
+}
+
+.dropperp {
+  position: absolute;
+  height: 130px;
+  left: 49.45%;
+  top: 45.5%;
+  cursor: pointer;
+  animation: dropperphide 800ms linear 1 both;
+  animation-delay: 16s;
+}
+@keyframes dropperphide {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.dropperm {
+  position: absolute;
+  height: 130px;
+  left: 57.4%;
+  top: 45.5%;
+  cursor: pointer;
+  animation: droppermhide 800ms linear 1 both;
+  animation-delay: 3s;
+}
+@keyframes droppermhide {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.dropperm2 {
+  position: absolute;
+  height: 130px;
+  left: 57.4%;
+  top: 45.5%;
+  cursor: pointer;
+  animation: droppermshow 800ms linear 1 both;
+  animation-delay: 6.8s;
+}
+@keyframes droppermshow {
+  0% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.dropperp2 {
+  position: absolute;
+  height: 130px;
+  left: 49.4%;
+  top: 45.5%;
+  cursor: pointer;
+  animation: dropperpshow 800ms linear 1 both;
+  animation-delay: 20.2s;
+}
+@keyframes dropperpshow {
+  0% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.panadol {
+  position: absolute;
+  height: 13px;
+  left: 34.9%;
+  top: 50.8%;
+  animation: panadol 1.5s infinite linear;
+  z-index: 1;
+}
+@keyframes panadol {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.droppermm2 {
+  position: absolute;
+  height: 170px;
+  left: 32.9%;
+  top: 18%;
+  cursor: pointer;
+  animation: droppermmshow 3s linear 1 both;
+  animation-delay: 3.8s;
+}
+@keyframes droppermmshow {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.dropperpp2 {
+  position: absolute;
+  height: 170px;
+  left: 32.9%;
+  top: 18%;
+  cursor: pointer;
+  animation: dropperppshow 3s linear 1 both;
+  animation-delay: 17s;
+}
+@keyframes dropperppshow {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.droppermm {
+  position: absolute;
+  height: 170px;
+  left: 32.9%;
+  top: 28.4%;
+  animation: droppermmhide 0ms linear 1 both;
+  animation-delay: 0 6.8s;
+}
+@keyframes droppermmhide {
+  0% {
+    transform: translateY(0%);
+  }
+  1% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.dropperpp {
+  position: absolute;
+  height: 170px;
+  left: 32.9%;
+  top: 28.4%;
+  animation: dropperpphide 0ms linear 1 both;
+  animation-delay: 0 19s;
+}
+@keyframes dropperpphide {
+  0% {
+    transform: translateY(0%);
+  }
+  1% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.dropm {
+  position: absolute;
+  top: 36%;
+  left: 35%;
+  border-radius: 50%;
+  background-color: orange;
+  height: 15px;
+  width: 15px;
+  z-index: 4 !important;
+  animation: dropm 1s linear 3 both;
+  animation-delay: 3.8s;
+}
+@keyframes dropm {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  25% {
+    transform: translateY(50%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateY(140%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(450%);
+    visibility: hidden;
+  }
+}
+.dropp {
+  position: absolute;
+  top: 36%;
+  left: 35%;
+  border-radius: 50%;
+  background-color: grey;
+  height: 15px;
+  width: 15px;
+  z-index: 4 !important;
+  animation: dropm 1s linear 3 both;
+  animation-delay: 17s;
+}
+@keyframes dropp {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  25% {
+    transform: translateY(50%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateY(140%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(450%);
+    visibility: hidden;
+  }
+}
+.mpanadol {
+  position: absolute;
+  height: 120px;
+  width: 180px;
+  top: 51%;
+  left: 30%;
+}
+.burette {
+  position: absolute;
+  height: 350px;
+  width: 250px;
+  left: 29.9%;
+}
+.burettediv {
+  background: rgba(190, 191, 215, 0.83);
+  position: absolute;
+  height: 200px;
+  width: 16px;
+  left: 35.15%;
+  top: 4%;
+}
+.orangecolor {
+  position: absolute;
+  height: 265px;
+  left: 26.9%;
+  top: 28%;
+  animation: orangecolor 5s linear 1 both;
+  animation-delay: 5s;
+}
+@keyframes orangecolor {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.dropb1 {
+  position: absolute;
+  top: 45%;
+  left: 35.13%;
+  height: 15px;
+  width: 15px;
+  z-index: 4 !important;
+  animation: dropb1 1s linear 3 both;
+  animation-delay: 7s;
+}
+@keyframes dropb1 {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(40%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(70%);
+    visibility: hidden;
+  }
+}
+.redcolor {
+  position: absolute;
+  height: 265px;
+  left: 26.9%;
+  top: 28%;
+  animation: redcolor 5s linear 1 both;
+  animation-delay: 10s;
+}
+@keyframes redcolor {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.pinkcolor {
+  position: absolute;
+  height: 265px;
+  left: 26.9%;
+  top: 28%;
+  animation: redcolor 5s linear 1 both;
+  animation-delay: 19s;
+}
+@keyframes redcolor {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.dropb2 {
+  position: absolute;
+  top: 45%;
+  left: 35.13%;
+  height: 15px;
+  width: 15px;
+  z-index: 4 !important;
+  animation: dropb2 1s linear 3 both;
+  animation-delay: 21s;
+}
+@keyframes dropb2 {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(40%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(70%);
+    visibility: hidden;
+  }
+}
