@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "doodle";
+  src: url("../../../IndieFlower-Regular.ttf");
+}
+@font-face {
+  font-family: "coo";
+  src: url("../../../IndieFlower-Regular.ttf");
+}
 .Exp1 {
   background: url("../../../images/Lab1.png");
   background-repeat: no-repeat;
@@ -34,6 +42,7 @@
   left: 51%;
   top: 63.5%;
   z-index: 1;
+  font-family: "doodle";
 }
 .mo {
   position: absolute;
@@ -46,6 +55,7 @@
   left: 59%;
   top: 63.5%;
   z-index: 1;
+  font-family: "doodle";
 }
 .p {
   position: absolute;
