@@ -4,6 +4,10 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Routes from "./components/Routes";
 import { useSelector } from "react-redux";
 
+//styling
+import deadpool from "./images/deadpool.gif";
+import "./App.css";
+
 function App() {
   //ToDo  answers loading
   const LoadingRooms = useSelector((state) => state.roomReducer.loading);
@@ -26,7 +30,7 @@ function App() {
   return (
     <div>
       {LoadingRooms || LoadingQuestions || loadingChoices ? (
-        <BeatLoader size={10} />
+        <img src={deadpool} alt="" className="loadingImg" />
       ) : (
         <Routes socket={socket} />
       )}

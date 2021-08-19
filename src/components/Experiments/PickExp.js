@@ -19,9 +19,11 @@ const PickExp = () => {
           <img src={E2} />
         </div>
       </Link>
-      <div className="exp3" type="button">
-        <img src={E3} />
-      </div>
+      <Link to="/soap-exp">
+        <div className="exp3" type="button">
+          <img src={E3} />
+        </div>
+      </Link>
     </div>
   );
 };

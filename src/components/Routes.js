@@ -9,6 +9,7 @@ import Room from "./Questions/Room";
 import Team from "./Teams/Team";
 import Test from "./Teams/Test";
 import Home from "./Home/Home";
+import Soap from "./Experiments/SoapExp";
 
 const Routes = ({ socket }) => {
   return (
@@ -37,7 +38,9 @@ const Routes = ({ socket }) => {
       <Route path="/titration">
         <Titration />
       </Route>
-
+      <Route path="/soap-exp">
+        <Soap />
+      </Route>
       <Route path="/">
         <Home />
       </Route>
