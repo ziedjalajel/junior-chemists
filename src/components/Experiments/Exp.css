@@ -6,75 +6,81 @@
   width: 100%;
   height: 100%;
 }
-.exp1 > img {
+.drogon {
   position: absolute;
-  height: 350px;
-  width: auto;
-  left: 25%;
-  top: 18%;
-  cursor: pointer;
-  transition: width 1s, transform 1s, background-color 1s;
+  top: 0;
+  right: 0;
 }
-.exp1 > img::after {
-  position: absolute;
-  top: 50%;
-  margin-top: -5px;
-  width: 350px;
-  height: 100vh;
+.house-lists {
+  display: flex;
+  margin-left: 35%;
 }
-.exp1 > img:hover {
-  position: absolute;
-  left: 21%;
-  top: 10%;
-  transform: skewX(-5deg);
-  width: auto;
-  height: 59vh;
+.house {
+  background-image: linear-gradient(rgba(7, 2, 34, 0.5), rgba(7, 2, 34, 0.5));
+  position: relative;
+  overflow: hidden;
+  /* outside styling */
+  width: 70px;
+  height: 450px;
+  background-size: auto 105%;
+  background-position: center;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 1);
+  min-width: 100px;
+  transition: 0.5s ease;
+  margin: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.exp2 > img {
+.sigil {
+  min-width: 100px;
+  text-align: center;
   position: absolute;
-  height: 350px;
-  width: auto;
-  left: 45%;
-  top: 22%;
-  cursor: pointer;
-  transition: width 1s, transform 1s, background-color 1s;
+  bottom: 10px;
 }
-.exp2 > img::after {
-  position: absolute;
-  top: 50%;
-  margin-top: -5px;
-  width: 350px;
-  height: 100vh;
+.sigil img {
+  /*filter: brightness(0) invert(1);*/
+  max-width: 80px;
+  max-height: 60px;
 }
-.exp2 > img:hover {
-  position: absolute;
-  left: 42%;
-  top: 17%;
-  transform: skewX(-5deg);
-  width: auto;
-  height: 55vh;
+.house:hover {
+  /*when open styling */
+  min-width: 450px;
+  background-size: auto 100%;
+  border-radius: 10px;
 }
-.exp3 > img {
-  position: absolute;
-  height: 330px;
-  width: auto;
-  left: 65%;
-  top: 21.5%;
-  cursor: pointer;
-  transition: width 1s, transform 1s, background-color 1s;
+.house-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
 }
-.exp3 > img::after {
+.house::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 50%;
-  margin-top: -5px;
-  width: 350px;
-  height: 100vh;
+  transition: 0.5s ease;
 }
-.exp3 > img:hover {
-  position: absolute;
-  left: 62%;
-  top: 18.5%;
-  transform: skewX(-5deg);
-  width: auto;
-  height: 51vh;
+.house:hover::before {
+  background: none;
+}
+.house-name {
+  background-image: linear-gradient(rgba(7, 2, 34, 0.5), rgba(7, 2, 34, 0.5));
+  border-radius: 10px;
+  color: #fff;
+  transform: rotate(-90deg);
+  font-size: 50px;
+  letter-spacing: 2px;
+  transition: 0.5s ease;
+  max-width: 100%;
+  margin-bottom: 120%;
+}
+.house:hover .house-name {
+  transform: rotate(0deg);
+  margin-bottom: 3%;
+  margin-left: 20%;
 }
