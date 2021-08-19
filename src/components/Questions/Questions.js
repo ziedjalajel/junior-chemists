@@ -71,6 +71,7 @@ const Questions = ({ socket }) => {
           console.log(myAnswers);
           history.push(`/results`);
           // setTimeout(() => history.push(`/results`), 5000);
+          //hello
         }
       }
     }
