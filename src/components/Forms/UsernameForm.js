@@ -1,7 +1,6 @@
 import { Link, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Questions from "../Questions/Questions";
 
 //styling
 import "./Form.css";
@@ -10,24 +9,16 @@ import Go from "../../images/Picture2.png";
 const UsernameForm = ({ socket }) => {
   const history = useHistory();
   const [username, setUsername] = useState("");
+  let handleSubmit;
 
-  const user = username;
-
-  const handleSubmit = (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     socket.emit("joinRoom", { username });
-    <Questions user={user} />;
     socket.on("roomLength", (a) => {
       console.log(a);
-      console.log(user);
-
-      if (a === 4) {
-        history.push(`/rooms`);
-      }
+      history.push(`/rooms`);
     });
-
-    // dispatch(addChatUser(chat, +chatSlug));
   };
 
   return (
