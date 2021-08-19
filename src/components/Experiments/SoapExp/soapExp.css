@@ -1,0 +1,404 @@
+.Exp3 {
+  background: url("../../../images/Lab1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Spoon {
+  position: absolute;
+  height: 20%;
+  top: 43%;
+  left: 49%;
+}
+.bowl {
+  position: absolute;
+  height: 20%;
+  left: 47%;
+  top: 49%;
+}
+.oildrop {
+  position: absolute;
+  height: 5%;
+  left: 53%;
+  top: 49%;
+  z-index: 1;
+  /* animation: oildrop 1.5s 1 both;
+  animation-delay: 1s; */
+}
+/* @keyframes oildrop {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+} */
+.oliveoil {
+  position: absolute;
+  height: 20%;
+  left: 85%;
+  top: 47%;
+  animation: oliveoil 2s linear 1 both;
+  animation-delay: 1s;
+}
+@keyframes oliveoil {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-10%);
+    visibility: hidden;
+  }
+}
+.oliveoilreturn {
+  position: absolute;
+  height: 20%;
+  left: 85%;
+  top: 47%;
+  animation: oliveoilreturn 2s linear 1 both;
+  animation-delay: 7s;
+}
+@keyframes oliveoilreturn {
+  0% {
+    transform: translateY(-10%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.oliveoil2 {
+  position: absolute;
+  height: 20%;
+  left: 54%;
+  top: 44%;
+}
+.soapmold {
+  position: absolute;
+  height: 20%;
+  left: 15%;
+  top: 52%;
+}
+.thermo {
+  position: absolute;
+  height: 18%;
+  width: 5%;
+  left: 62%;
+  top: 45%;
+  z-index: 2;
+}
+.water {
+  position: absolute;
+  height: 18%;
+  left: 62%;
+  top: 47%;
+  z-index: 1;
+}
+.Naoh {
+  position: absolute;
+  height: 16%;
+  left: 75%;
+  top: 49%;
+  animation: Naoh 2s linear 1 both;
+  animation-delay: 1s;
+}
+@keyframes Naoh {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-10%);
+    visibility: hidden;
+  }
+}
+.Naoh2 {
+  position: absolute;
+  height: 16%;
+  left: 75%;
+  top: 49%;
+  animation: Naoh2 2s linear 1 both;
+  animation-delay: 7s;
+}
+@keyframes Naoh2 {
+  0% {
+    transform: translateY(-10%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.bowloil {
+  position: absolute;
+  height: 26%;
+  left: 42%;
+  top: 46%;
+}
+.oilnaoh {
+  position: absolute;
+  height: 26%;
+  left: 42%;
+  top: 46%;
+}
+.thermodiv {
+  position: absolute;
+  background-color: #b8cefd;
+  height: 10px;
+  width: 105px;
+  left: 63%;
+  top: 56.59%;
+  animation: thermodiv 1s linear 1 both;
+  animation-delay: 8s;
+}
+@keyframes thermodiv {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.naohdiv {
+  position: absolute;
+  background-color: white;
+  height: 59px;
+  width: 105px;
+  border-bottom-left-radius: 12%;
+  border-bottom-right-radius: 12%;
+  left: 63%;
+  top: 56.59%;
+  z-index: 1;
+  animation: naohdiv 3s linear 1 both;
+  animation-delay: 6s;
+}
+@keyframes naohdiv {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.oven {
+  position: absolute;
+  height: 15%;
+  top: 49.5%;
+  right: 89.5%;
+}
+.beaker {
+  position: absolute;
+  height: 12%;
+  top: 39.5%;
+  left: 3%;
+  z-index: 1;
+  animation: beaker 7s linear 1 both;
+  animation-delay: 11s;
+}
+@keyframes beaker {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  40% {
+    transform: translateY(50%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateY(70%);
+    visibility: visible;
+  }
+  75% {
+    transform: translateY(90%);
+    visibility: visible;
+  }
+  85% {
+    transform: translateY(105%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(115%);
+    visibility: visible;
+  }
+}
+.naohdrop {
+  position: absolute;
+  height: 3.5%;
+  top: 41.5%;
+  left: 67.5%;
+  animation: naohdrop 1s linear 3 both;
+  animation-delay: 3.7s;
+}
+@keyframes naohdrop {
+  0% {
+    transform: translateY(25%);
+    visibility: hidden;
+  }
+  25% {
+    transform: translateY(80%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateY(160%);
+    visibility: visible;
+  }
+  75% {
+    transform: translateY(220%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(320%);
+    visibility: hidden;
+  }
+}
+.Naohrotated {
+  position: absolute;
+  height: 17%;
+  top: 33%;
+  left: 67.5%;
+  animation: Naohrotated 3s linear 1 both;
+  animation-delay: 3.5s;
+}
+@keyframes Naohrotated {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.oildropBurner {
+  position: absolute;
+  height: 4%;
+  top: 36%;
+  left: 6.5%;
+  animation: oildropBurner 1s linear 3 both;
+  animation-delay: 3.7s;
+}
+@keyframes oildropBurner {
+  0% {
+    transform: translateY(5%);
+    visibility: hidden;
+  }
+  25% {
+    transform: translateY(60%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  75% {
+    transform: translateY(150%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(250%);
+    visibility: hidden;
+  }
+}
+.thermoInBurner {
+  position: absolute;
+  height: 13%;
+  width: 4.5%;
+  top: 37.5%;
+  left: 2.5%;
+  z-index: 1;
+  animation: thermoInBurner 7s linear 1 both;
+  animation-delay: 11s;
+}
+@keyframes thermoInBurner {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  25% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  75% {
+    transform: translateY(85%);
+    visibility: visible;
+  }
+  80% {
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(110%);
+    visibility: visible;
+  }
+}
+.oilOnBeaker {
+  position: absolute;
+  height: 19%;
+  top: 31%;
+  left: 7%;
+  animation: Naohrotated 3s linear 1 both;
+  animation-delay: 3.5s;
+}
+@keyframes Naohrotated {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+
+.increseHeatNaoh {
+  position: absolute;
+  background-color: black;
+  height: 30px;
+  width: 5px;
+  top: 49.5%;
+  z-index: 0;
+  left: 64.3%;
+  animation: increseHeatNaoh linear 1 both;
+  animation-delay: 6.5s;
+}
+@keyframes increseHeatNaoh {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}

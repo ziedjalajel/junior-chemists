@@ -30,7 +30,7 @@ const Titration = () => {
   }
   return (
     <>
-      <button className="btn btn-outline-dark" onClick={refreshPage}>
+      <button className="btn" onClick={refreshPage}>
         <p className="Repeats">Repeat</p>
       </button>
       <div className="Exp1">

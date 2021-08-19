@@ -450,13 +450,22 @@
     visibility: hidden;
   }
 }
-.btn-outline-dark {
+.btn {
   position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  border-style: solid black;
+  border-radius: 10px;
   top: 68.5%;
-  left: 10%;
+  left: 95%;
+  right: 5%;
   z-index: 1;
   font-family: "doodle";
   height: 40px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
 }
 .Repeats {
   font-weight: bolder;

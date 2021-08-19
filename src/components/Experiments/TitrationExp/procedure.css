@@ -196,13 +196,13 @@
 }
 .procedure {
   font-family: "doodle";
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: bolder;
+  font-size: 1.2rem;
   position: absolute;
   text-align: center;
   left: 5%;
   right: 5%;
-  top: 68%;
+  top: 69%;
   width: 90%;
   animation: procedure 5s linear 1 both;
   animation-delay: 25s;

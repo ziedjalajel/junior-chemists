@@ -15,7 +15,7 @@ const Explosion = () => {
   }
   return (
     <>
-      <button className="btn btn-outline-dark" onClick={refreshPage}>
+      <button className="btn" onClick={refreshPage}>
         <p className="Repeat">Repeat</p>
       </button>
       <div className="Exp2">
