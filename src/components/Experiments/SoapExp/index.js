@@ -2,11 +2,10 @@
 import "./soapExp.css";
 import Spoon from "./images/spoon.png";
 import bowl from "./images/bowl.png";
-import oildrop from "./images/oildrop.png";
 import oliveoil from "./images/oliveoil.png";
 import oliveoilreturn from "./images/oliveoil.png";
-import oliveoil2 from "./images/oliveoil2.png";
 import soapmold from "./images/soapmold.png";
+import oildrop from "./images/oildrop.png";
 import thermo from "./images/thermo.png";
 import water from "./images/water.png";
 import Naoh from "./images/Naoh.png";
@@ -21,6 +20,17 @@ import oildropBurner from "./images/oildrop.png";
 import thermoInBurner from "./images/thermo.png";
 import oilOnBeaker from "./images/oliveoil2.png";
 import yellowbeaker from "./images/yellowbeaker.png";
+import ybRotated from "./images/ybRotated.png";
+import naohbrotated from "./images/naohbrotated.png";
+import bluedrop from "./images/bluedrop.png";
+import poursoap1 from "./images/poursoap.png";
+import poursoap2 from "./images/poursoap.png";
+import poursoap3 from "./images/poursoap.png";
+import poursoap4 from "./images/poursoap.png";
+import soapdrop1 from "./images/soapdrop.png";
+import soapdrop2 from "./images/soapdrop.png";
+import soapdrop3 from "./images/soapdrop.png";
+import soapdrop4 from "./images/soapdrop.png";
 
 const Soap = () => {
   return (
@@ -32,6 +42,7 @@ const Soap = () => {
       <img src={soapmold} alt="" className="soapmold" />
       <img src={thermo} alt="" className="thermo" />
       <img src={water} alt="" className="water" />
+      <img src={oildrop} alt="" className="oildrop" />
       <img src={Naoh} alt="" className="Naoh" />
       <img src={Naoh2} alt="" className="Naoh2" />
       <img src={bowloil} alt="" className="bowloil" />
@@ -44,6 +55,17 @@ const Soap = () => {
       <img src={thermoInBurner} alt="" className="thermoInBurner" />
       <img src={oilOnBeaker} alt="" className="oilOnBeaker" />
       <img src={yellowbeaker} alt="" className="yellowbeaker" />
+      <img src={ybRotated} alt="" className="ybRotated" />
+      <img src={naohbrotated} alt="" className="naohbrotated" />
+      <img src={bluedrop} alt="" className="bluedrop" />
+      <img src={poursoap1} alt="" className="poursoap1" />
+      <img src={poursoap2} alt="" className="poursoap2" />
+      <img src={poursoap3} alt="" className="poursoap3" />
+      <img src={poursoap4} alt="" className="poursoap4" />
+      <img src={soapdrop1} alt="" className="soapdrop1" />
+      <img src={soapdrop2} alt="" className="soapdrop2" />
+      <img src={soapdrop3} alt="" className="soapdrop3" />
+      <img src={soapdrop4} alt="" className="soapdrop4" />
       <div className="thermodiv"></div>
       <div className="naohdiv"></div>
       <div className="increseHeatNaoh"></div>
