@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "doodle";
+  src: url("../../../IndieFlower-Regular.ttf");
+}
+@font-face {
+  font-family: "coo";
+  src: url("../../../IndieFlower-Regular.ttf");
+}
+.soapProc {
+  font-family: "doodle";
+  font-weight: bolder;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: center;
+  right: 5%;
+  top: 63%;
+  width: 90%;
+  animation: soapProc 5s linear 1 both;
+  animation-delay: 40.5s;
+}
+@keyframes soapProc {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(15%);
+    visibility: visible;
+  }
+}
+.toleft {
+  font-family: "doodle";
+  font-weight: bolder;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: start;
+  padding-right: 20px;
+  left: 2%;
+  right: 5%;
+  top: 72%;
+  width: 90%;
+  animation: toleft 5s linear 1 both;
+  animation-delay: 40.5s;
+}
+@keyframes toleft {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(15%);
+    visibility: visible;
+  }
+}
+.toright {
+  font-family: "doodle";
+  font-weight: bolder;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: start;
+  margin-left: 50%;
+  left: 2%;
+  right: 5%;
+  top: 72%;
+  width: 90%;
+  animation: toright 5s linear 1 both;
+  animation-delay: 40.5s;
+}
+@keyframes toright {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(15%);
+    visibility: visible;
+  }
+}
+.introSoap {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bolder;
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  animation: introSoap 2s linear 1 both;
+}
+@keyframes introSoap {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc1 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 26%;
+  animation: Sproc1 3.7s linear 1 both;
+  animation-delay: 3s;
+}
+@keyframes Sproc1 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc2 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 19%;
+  animation: Sproc2 3.7s linear 1 both;
+  animation-delay: 6.7s;
+}
+@keyframes Sproc2 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc3 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  animation: Sproc3 3.7s linear 1 both;
+  animation-delay: 10.4s;
+}
+@keyframes Sproc3 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc4 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 16%;
+  animation: Sproc4 3.7s linear 1 both;
+  animation-delay: 14.1s;
+}
+@keyframes Sproc4 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc5 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 38%;
+  /* right: 5%; */
+  animation: Sproc5 3.7s linear 1 both;
+  animation-delay: 17.8s;
+}
+@keyframes Sproc5 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc6 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 38%;
+  animation: Sproc6 3.7s linear 1 both;
+  animation-delay: 21.5s;
+}
+@keyframes Sproc6 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc7 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 32%;
+  animation: Sproc7 3.7s linear 1 both;
+  animation-delay: 25.2s;
+}
+@keyframes Sproc7 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc8 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 20%;
+  animation: Sproc8 3.7s linear 1 both;
+  animation-delay: 28.9s;
+}
+@keyframes Sproc8 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc9 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  animation: Sproc9 3.7s linear 1 both;
+  animation-delay: 32.6s;
+}
+@keyframes Sproc9 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}
+.Sproc10 {
+  font-family: "doodle";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  left: 12%;
+  animation: Sproc10 3.7s linear 1 both;
+  animation-delay: 36.3s;
+}
+@keyframes Sproc10 {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  1% {
+    transform: translateY(-50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-25%);
+    visibility: hidden;
+  }
+}

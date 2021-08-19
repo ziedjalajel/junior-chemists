@@ -12,7 +12,7 @@
   top: 43%;
   left: 49%;
   animation: Spoon 1s 4 both;
-  animation-delay: 26.5s;
+  animation-delay: 26s;
 }
 @keyframes Spoon {
   0% {
@@ -59,7 +59,7 @@
     visibility: visible;
   }
   99% {
-    transform: translateY(50%);
+    transform: translateY(100%);
     visibility: visible;
   }
   100% {
@@ -114,6 +114,61 @@
   height: 20%;
   left: 15%;
   top: 52%;
+  animation: soapmold 38.5s linear 1 both;
+}
+@keyframes soapmold {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  99% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.soapInMold {
+  position: absolute;
+  height: 20%;
+  left: 15%;
+  top: 52%;
+  animation: soapInMold 3s linear 1 both;
+  animation-delay: 38.5s;
+}
+@keyframes soapInMold {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.soap {
+  position: absolute;
+  height: 15%;
+  left: 15%;
+  top: 52%;
+  animation: soap 3s linear 1 both;
+  animation-delay: 41.7s;
+}
+@keyframes soap {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
 }
 .thermo {
   position: absolute;
@@ -123,7 +178,7 @@
   top: 45%;
   z-index: 2;
   animation: thermo 2s linear 1 both;
-  animation-delay: 22s;
+  animation-delay: 20s;
 }
 @keyframes thermo {
   0% {
@@ -141,6 +196,72 @@
   left: 62%;
   top: 47%;
   z-index: 1;
+  animation: water 2s linear 1 both;
+  animation-delay: 21s;
+}
+@keyframes water {
+  0% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.thermodiv {
+  position: absolute;
+  background-color: #b8cefd;
+  height: 10px;
+  width: 105px;
+  left: 63%;
+  top: 56.59%;
+  animation: thermodiv 14.47s linear 1 both;
+  animation-delay: 8.5s;
+}
+@keyframes thermodiv {
+  0% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: hidden;
+  }
+}
+.glassRod {
+  position: absolute;
+  height: 25%;
+  left: 60%;
+  top: 41%;
+  animation: glassRod 1.5s linear 3 both;
+  animation-delay: 7s;
+}
+@keyframes glassRod {
+  0% {
+    transform: translateX(0%);
+    visibility: hidden;
+  }
+  25% {
+    transform: translateX(28%);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  75% {
+    transform: translateX(-15%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0%);
+    visibility: hidden;
+  }
 }
 .Naoh {
   position: absolute;
@@ -200,7 +321,7 @@
   height: 26%;
   left: 42%;
   top: 46%;
-  animation: bowloil 6s linear 1 both;
+  animation: bowloil 8s linear 1 both;
   animation-delay: 20s;
 }
 @keyframes bowloil {
@@ -222,7 +343,7 @@
   height: 26%;
   left: 42%;
   top: 46%;
-  animation: oilnaoh 6s linear 1 both;
+  animation: oilnaoh 3.7s linear 1 both;
   animation-delay: 26.8s;
 }
 @keyframes oilnaoh {
@@ -239,29 +360,10 @@
     visibility: hidden;
   }
 }
-.thermodiv {
-  position: absolute;
-  background-color: #b8cefd;
-  height: 10px;
-  width: 105px;
-  left: 63%;
-  top: 56.59%;
-  animation: thermodiv 1s linear 1 both;
-  animation-delay: 8s;
-}
-@keyframes thermodiv {
-  0% {
-    transform: translateY(0%);
-    visibility: hidden;
-  }
-  100% {
-    transform: translateY(0%);
-    visibility: visible;
-  }
-}
+
 .naohdiv {
   position: absolute;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.69);
   height: 59px;
   width: 105px;
   border-bottom-left-radius: 12%;
@@ -511,10 +613,10 @@
   height: 12%;
   top: 45%;
   left: 54.5%;
-  animation: oliveoil 4.5s linear 1 both;
+  animation: ybRotated 4.5s linear 1 both;
   animation-delay: 18s;
 }
-@keyframes oliveoil {
+@keyframes ybRotated {
   0% {
     transform: translateY(0%);
     visibility: hidden;
@@ -534,7 +636,7 @@
   top: 45%;
   left: 54.5%;
   animation: naohbrotated 4.5s linear 1 both;
-  animation-delay: 24s;
+  animation-delay: 23.2s;
 }
 @keyframes naohbrotated {
   0% {
@@ -579,7 +681,7 @@
   top: 48%;
   left: 20.5%;
   animation: poursoap1 2s linear both;
-  animation-delay: 30s;
+  animation-delay: 30.5s;
 }
 @keyframes poursoap1 {
   0% {
@@ -601,7 +703,7 @@
   top: 59%;
   left: 23.4%;
   animation: soapdrop1 1s linear 1 both;
-  animation-delay: 30.5s;
+  animation-delay: 31s;
 }
 @keyframes soapdrop1 {
   0% {
@@ -667,7 +769,7 @@
   top: 50.5%;
   left: 17%;
   animation: poursoap3 2s linear both;
-  animation-delay: 33.5s;
+  animation-delay: 34.5s;
 }
 @keyframes poursoap3 {
   0% {
@@ -689,7 +791,7 @@
   top: 61.8%;
   left: 20%;
   animation: soapdrop3 1s linear 1 both;
-  animation-delay: 36s;
+  animation-delay: 35s;
 }
 @keyframes soapdrop3 {
   0% {
