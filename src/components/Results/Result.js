@@ -1,12 +1,26 @@
 // styling
 import "./Result.css";
-import { FaTrophy } from "react-icons/fa";
+// import { FaTrophy } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
-const Result = () => {
+const Result = ({ socket }) => {
+  const [room, setRoom] = useState({});
+  console.log(socket.id);
+  useEffect(() => {
+    console.log("shi");
+    socket.emit("resultEmit", 5);
+    // socket.on("result", (u) => {
+    //   setRoom(u);
+    //   console.log(u);
+    // });
+    socket.on("test", (u) => {
+      console.log(u);
+    });
+  }, []);
   return (
     <div className="result">
       <div className="first">
-        <FaTrophy
+        {/* <FaTrophy
           style={{
             color: "#ffd700",
             position: "absolute",
@@ -15,11 +29,11 @@ const Result = () => {
             right: "96%",
             marginBottom: "5%",
           }}
-        />
+        /> */}
         <h1>Winner !!</h1>
       </div>
       <div className="second">
-        <FaTrophy
+        {/* <FaTrophy
           style={{
             color: "#767473",
             position: "absolute",
@@ -27,11 +41,11 @@ const Result = () => {
             width: "36px",
             right: "96%",
           }}
-        />
+        /> */}
         <h1>Loser 1 !!</h1>
       </div>
       <div className="third">
-        <FaTrophy
+        {/* <FaTrophy
           style={{
             color: "#8A5A44",
             position: "absolute",
@@ -39,7 +53,7 @@ const Result = () => {
             width: "30px",
             right: "97%",
           }}
-        />
+        /> */}
         <h1>Loser 2 !!</h1>
       </div>
       <div className="rest"></div>

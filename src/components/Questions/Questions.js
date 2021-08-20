@@ -8,7 +8,7 @@ import QuestionDetail from "./QuestionDetail";
 
 const Questions = ({ socket }) => {
   const questions = useSelector((state) => state.questionReducer.questions);
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(2);
   const [question, setQuestion] = useState(null);
   const [answers, setAnswers] = useState({});
   const dispatch = useDispatch();
@@ -24,17 +24,13 @@ const Questions = ({ socket }) => {
     let myQuestion;
     let myAnswers = [];
 
-    // socket.on("usernames", (a) => {
-    //   setUsername(a);
-    //   // console.log(a);
-    // });
-
     socket.on("startRoom", (u) => {
       setRoom(u);
+      // console.log(u);
     });
     socket.on("newUser", (u) => {
       setmyUser(u);
-      console.log(u.username);
+      // console.log(u.username);
     });
     socket.on("startRoom", (a) => {
       setNumberOfUsers(a.users.length);
@@ -43,7 +39,7 @@ const Questions = ({ socket }) => {
 
     socket.on("startRoom", (a) => {
       setUsername(a.users);
-      console.log(a.users);
+      // console.log(a.users);
     });
 
     // console.log(myUser);
@@ -54,7 +50,7 @@ const Questions = ({ socket }) => {
       } else {
         myQuestion = questions.find((q) => q.id === question.id + 1);
         if (myQuestion) {
-          setSeconds(5);
+          setSeconds(2);
           setQuestion(myQuestion);
         } else {
           for (const key in answers) {
@@ -68,10 +64,10 @@ const Questions = ({ socket }) => {
           myAnswers.map((a) =>
             dispatch(addAnswer(a.roomId, a.questionId, a.choiceId, a.userId))
           );
-          console.log(myAnswers);
+          // console.log(myAnswers);
           history.push(`/results`);
+
           // setTimeout(() => history.push(`/results`), 5000);
-          //hello
         }
       }
     }
@@ -82,13 +78,13 @@ const Questions = ({ socket }) => {
   }, [questions]);
   if (!question) return <div></div>;
 
-  if (username !== null && myUser !== null) {
-    for (let i = 0; i < username.length; i++) {
-      if (username[i] === myUser.username) {
-        username[i] = "you";
-      }
-    }
-  }
+  // if (username !== null && myUser !== null) {
+  //   for (let i = 0; i < username.length; i++) {
+  //     if (username[i] === myUser.username) {
+  //       username[i] = "you";
+  //     }
+  //   }
+  // }
 
   return (
     <>
@@ -106,6 +102,7 @@ const Questions = ({ socket }) => {
                 <h6>Time Left : {seconds} s</h6>
               </div>
             </div>
+            <div></div>
           </form>
           <div>
             <p> {username !== null && username[0]}</p>

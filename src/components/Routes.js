@@ -21,13 +21,13 @@ const Routes = ({ socket }) => {
         <UsernameForm socket={socket} />
       </Route>
       <Route path="/team">
-        <Team socket={socket} />
+        <Team />
       </Route>
       <Route path="/choose-experiment">
         <PickExp />
       </Route>
       <Route path="/results">
-        <Result />
+        <Result socket={socket} />
       </Route>
       <Route path="/">
         <Home />

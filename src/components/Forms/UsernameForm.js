@@ -1,6 +1,5 @@
-import { Link, useHistory } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 //styling
 import "./Form.css";
@@ -9,16 +8,15 @@ import Go from "../../images/Picture2.png";
 const UsernameForm = ({ socket }) => {
   const history = useHistory();
   const [username, setUsername] = useState("");
-  let handleSubmit;
 
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     socket.emit("joinRoom", { username });
-    socket.on("roomLength", (a) => {
-      console.log(a);
-      history.push(`/rooms`);
-    });
+    // socket.on("roomLength", (a) => {
+    //   console.log(a);
+    // });
+    history.push(`/rooms`);
   };
 
   return (
