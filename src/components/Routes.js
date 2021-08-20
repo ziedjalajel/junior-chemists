@@ -18,7 +18,7 @@ const Routes = ({ socket }) => {
         <Test />
       </Route>
       <Route path="/rooms">
-        <Room />
+        <Room socket={socket} />
       </Route>
       <Route path="/user">
         <UsernameForm socket={socket} />
@@ -33,7 +33,7 @@ const Routes = ({ socket }) => {
         <Explosion />
       </Route>
       <Route path="/results">
-        <Result />
+        <Result socket={socket} />
       </Route>
       <Route path="/titration">
         <Titration />

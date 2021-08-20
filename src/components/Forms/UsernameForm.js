@@ -1,17 +1,21 @@
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+
 //styling
 import "./Form.css";
 import Go from "../../images/Picture2.png";
-import { useState } from "react";
 
 const UsernameForm = ({ socket }) => {
   const history = useHistory();
-  const [username, setUsername] = useState(null);
+  const [username, setUsername] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    socket.emit("joinRoom", { username, room: 1 });
-    // dispatch(addChatUser(chat, +chatSlug));
+
+    socket.emit("joinRoom", { username });
+    // socket.on("roomLength", (a) => {
+    //   console.log(a);
+    // });
     history.push(`/rooms`);
   };
 
