@@ -43,3 +43,12 @@
   top: 32%;
   left: 35%;
 }
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

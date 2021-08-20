@@ -9,7 +9,7 @@ import deadpool from "./images/deadpool.gif";
 import "./App.css";
 
 function App() {
-  //ToDo  answers loading
+  const loadingAnswer = useSelector((state) => state.answerReducer.loading);
   const LoadingRooms = useSelector((state) => state.roomReducer.loading);
   const LoadingQuestions = useSelector(
     (state) => state.questionReducer.loading
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      {LoadingRooms || LoadingQuestions || loadingChoices ? (
+      {LoadingRooms || LoadingQuestions || loadingChoices || loadingAnswer ? (
         <img src={deadpool} alt="" className="loadingImg" />
       ) : (
         <Routes socket={socket} />

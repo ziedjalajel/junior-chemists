@@ -107,3 +107,76 @@ input[type="radio"]:checked:after {
   visibility: visible;
   border: 1px solid black;
 }
+.waiting {
+  font-family: "doodle";
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 90%;
+}
+.deadpool {
+  position: absolute;
+  left: 5%;
+  height: 50%;
+  width: 50%;
+  padding-top: 2%;
+  animation: image 3s infinite linear both;
+}
+@keyframes image {
+  0% {
+    transform: translateX(75%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(105%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(135%);
+    visibility: hidden;
+  }
+}
+.bepatient {
+  position: absolute;
+  top: 45%;
+  left: 62%;
+  font-size: 50px;
+  font-weight: bold;
+}
+.usernameP {
+  position: relative;
+  left: 33%;
+  font-size: xx-large;
+  top: 30%;
+  padding-top: 1%;
+  font-weight: bolder;
+}
+.parap {
+  position: absolute;
+  left: 16%;
+  font-size: xx-large;
+  top: 25%;
+  font-weight: bold;
+}
+.wfop {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  font-size: xx-large;
+}
+.runningbook {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 113%;
+}
+.scroll {
+  position: relative;
+  overflow-y: auto;
+  /* width: 0px; */
+  height: 600px;
+  left: 27%;
+  top: 6.5%;
+  overflow-x: hidden;
+}
