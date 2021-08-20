@@ -5,7 +5,7 @@ import DoorExp from "../../images/experiments-door.png";
 import DoorQuiz from "../../images/quizes-door.png";
 import PT from "../../images/pt.png";
 import Lab from "../../images/Ab7b.gif";
-import Quiz from "../../images/q.webp";
+import Quiz from "../../images/q.gif";
 
 const Home = () => {
   return (
