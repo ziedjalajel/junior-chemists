@@ -4,11 +4,11 @@ import Questions from "./Questions";
 //components
 import QuestionList from "./QuestionList";
 
-const Room = () => {
+const Room = ({ socket }) => {
   return (
     <>
       {/* <QuestionList /> */}
-      <Questions />
+      <Questions socket={socket} />
     </>
   );
 };

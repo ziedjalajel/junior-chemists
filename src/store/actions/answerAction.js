@@ -16,15 +16,15 @@ export const fetchAnswers = () => {
     }
   };
 };
-export const addAnswer = (newAnswer, questionId, choiceId) => {
+export const addAnswer = (roomId, questionId, choiceId, userId) => {
   return async (dispatch) => {
     try {
-      const res = await instance.post(`rooms/1/${questionId}/${choiceId}/1`, {
-        newAnswer,
-      });
+      const res = await instance.post(
+        `rooms/${roomId}/${questionId}/${choiceId}/${userId}`
+      );
       dispatch({
         type: actionTypes.ADD_ANSWER,
-        payload: { newAnswer: res.data },
+        payload: res.data,
       });
     } catch (error) {
       console.log(error);

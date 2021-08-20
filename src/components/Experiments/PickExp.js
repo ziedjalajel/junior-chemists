@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 //styling
 import "./Exp.css";
-// import E1 from "../../images/exp1.png";
-// import E2 from "../../images/exp2.png";
-// import E3 from "../../images/exp3.png";
 import cbook1 from "../../images/cBook1.png";
 import titrationBook from "../../images/titrationBook.gif";
 import warning from "../../images/warning.png";
@@ -52,15 +49,17 @@ const PickExp = () => {
             to="/soap-exp"
             style={{ textDecoration: "none", color: "white" }}
           >
-            <div
-              className="house"
-              style={{ backgroundImage: `url(${soapExp})` }}
-            >
-              <div className="house-inner">
-                <div className="sigil">
-                  <img src={soapE} alt="" />
+            <div className="soaphover">
+              <div
+                className="house"
+                style={{ backgroundImage: `url(${soapExp})` }}
+              >
+                <div className="house-inner">
+                  <div className="sigil">
+                    <img src={soapE} alt="" />
+                  </div>
+                  <div className="house-name">Soap Exp.</div>
                 </div>
-                <div className="house-name">Soap Exp.</div>
               </div>
             </div>
           </Link>
