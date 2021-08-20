@@ -13,10 +13,10 @@ const UsernameForm = ({ socket }) => {
     event.preventDefault();
 
     socket.emit("joinRoom", { username });
-    // socket.on("roomLength", (a) => {
-    //   console.log(a);
-    // });
-    history.push(`/rooms`);
+    socket.on("roomLength", (a) => {
+      console.log(a);
+      if (a === 2) history.push(`/rooms`);
+    });
   };
 
   return (

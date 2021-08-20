@@ -12,6 +12,8 @@ function App() {
   );
   const loadingChoices = useSelector((state) => state.choiceReducer.loading);
 
+  const loadingAnswers = useSelector((state) => state.answerReducer.loading);
+
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ function App() {
 
   return (
     <div>
-      {LoadingRooms || LoadingQuestions || loadingChoices ? (
+      {LoadingRooms || LoadingQuestions || loadingChoices || loadingAnswers ? (
         <BeatLoader size={10} />
       ) : (
         <Routes socket={socket} />

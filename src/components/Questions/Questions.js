@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { addAnswer } from "../../store/actions/answerAction";
 //components
@@ -64,8 +65,9 @@ const Questions = ({ socket }) => {
           myAnswers.map((a) =>
             dispatch(addAnswer(a.roomId, a.questionId, a.choiceId, a.userId))
           );
-          // console.log(myAnswers);
-          history.push(`/results`);
+          console.log(myAnswers);
+          socket.emit("myAnswers", myAnswers);
+          // history.push(`/results`);
 
           // setTimeout(() => history.push(`/results`), 5000);
         }
@@ -90,6 +92,7 @@ const Questions = ({ socket }) => {
     <>
       {numberOfUsers === 3 ? (
         <>
+          <Link to="/results">see results</Link>
           <form>
             <div className="lines"></div>
             <div className="d">

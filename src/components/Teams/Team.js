@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+
 //styling
 import "./team.css";
 import "./Test.css";
@@ -7,7 +7,7 @@ import Random from "../../images/book1.png";
 import Private from "../../images/book2.png";
 import Dht from "../../images/DhT.png";
 
-const Team = ({ socket }) => {
+const Team = () => {
   return (
     <div className="team">
       <Link to="/user">

@@ -2,21 +2,19 @@
 import "./Result.css";
 // import { FaTrophy } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Result = ({ socket }) => {
-  const [room, setRoom] = useState({});
-  console.log(socket.id);
+  const [roomAnswers, setRoomAnswers] = useState({});
   useEffect(() => {
-    console.log("shi");
     socket.emit("resultEmit", 5);
-    // socket.on("result", (u) => {
-    //   setRoom(u);
-    //   console.log(u);
-    // });
-    socket.on("test", (u) => {
-      console.log(u);
+    socket.on("create-connection", (answers) => {
+      setRoomAnswers(answers);
+
+      console.log("hhee", answers[0]);
     });
   }, []);
+
   return (
     <div className="result">
       <div className="first">
