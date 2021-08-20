@@ -19,7 +19,11 @@ const PickExp = () => {
   const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
   return (
     <>
-      {isDesktopOrLaptop && (
+      {(isDesktopOrLaptop ||
+        isBigScreen ||
+        isTabletOrMobile ||
+        isPortrait ||
+        isRetina) && (
         <div className="pickexp">
           <div className="house-lists">
             <Link
