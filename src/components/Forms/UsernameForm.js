@@ -1,9 +1,11 @@
-import { useHistory } from "react-router-dom";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 //styling
 import "./Form.css";
 import Go from "../../images/Picture2.png";
+import book from "../../images/book.jpg";
+import greyarrow from "../../images/greyarrow.png";
 
 const UsernameForm = ({ socket }) => {
   const history = useHistory();
@@ -21,6 +23,10 @@ const UsernameForm = ({ socket }) => {
 
   return (
     <div className="user">
+      <Link to="/team">
+        <img src={greyarrow} alt="" className="backarrow" />
+      </Link>
+      <img src={book} alt="" className="Book" />
       <div className="usernameform">
         <div className="left-div">
           <h1>Enter your Username :</h1>

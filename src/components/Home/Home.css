@@ -1,25 +1,20 @@
-@font-face {
-  font-family: "kb3candystripesmedium";
-  src: url("../../kb3candystripes-webfont.woff2") format("woff2"),
-    url("../../kb3candystripes-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 .home {
-  background: url("../../images/bg.png");
+  /* background: url("../../images/bg.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
-  font-family: "kb3candystripesmedium";
+  z-index: -3;
+  font-family: "doodle";
 }
 .img1 {
   position: absolute;
-  height: 550px;
+  height: 600px;
   width: 350px;
   left: 4%;
-  top: 1px;
+  top: 11%;
+  z-index: -1;
   transform-origin: top left;
   transition: width 1s, transform 1s, background-color 1s;
 }
@@ -38,23 +33,26 @@
   /* transform: skewX(-5deg); */
   transform: skewY(55deg);
   width: 8vw;
-  height: 73vh;
+  height: 79.5vh;
 
   /* transform-origin: left; */
 }
 .inside1 {
   position: absolute;
   background-color: lightblue;
-  height: 546px;
+  height: 600px;
   width: 350px;
   left: 4%;
+  z-index: -2;
+  top: 11%;
 }
 .img2 {
   position: absolute;
-  height: 550px;
+  height: 600px;
   width: 350px;
-  left: 70%;
-  top: 1px;
+  left: 72.5%;
+  top: 11%;
+  z-index: -1;
   transform-origin: top left;
   transition: width 1s, transform 1s, background-color 1s;
 }
@@ -73,19 +71,61 @@
   transform: skewX(-55deg);
   transform: skewY(55deg);
   width: 8vw;
-  height: 73vh;
+  height: 79.5vh;
   transform-origin: top left;
 }
 .inside2 {
   position: absolute;
-  height: 546px;
-  width: 350px;
-  left: 70%;
+  height: 600px;
+  width: 349px;
+  left: 72.6%;
+  top: 11%;
+  z-index: -2;
 }
 .img3 {
   position: absolute;
   height: 300px;
-  width: 500px;
-  left: 33.7%;
-  top: 11%;
+  width: 550px;
+  left: 31.7%;
+  top: 21%;
+}
+.walking {
+  z-index: 6;
+  position: absolute;
+  top: 25%;
+  animation: walking 6s infinite linear both;
+}
+@keyframes walking {
+  0% {
+    transform: translateX(300%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(90%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(-120%);
+    visibility: hidden;
+  }
+}
+.opposit {
+  z-index: 6;
+  position: absolute;
+  top: 24%;
+  animation: opposit 5.5s infinite linear both;
+}
+@keyframes opposit {
+  0% {
+    transform: translateX(-50%);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(55%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(160%);
+    visibility: hidden;
+  }
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 //styling
 import "./Exp.css";
 import cbook1 from "../../images/cBook1.png";
@@ -7,11 +8,15 @@ import warning from "../../images/warning.png";
 import warningExp from "../../images/warningExp.gif";
 import soapE from "../../images/soapE.png";
 import soapExp from "../../images/soapExp.gif";
+import whitearrow from "../../images/whitearrow.png";
 
 const PickExp = () => {
   return (
     <>
       <div className="pickexp">
+        <Link to="/">
+          <img src={whitearrow} alt="" className="backarrow" />
+        </Link>
         <div className="house-lists">
           <Link
             to="/titration"

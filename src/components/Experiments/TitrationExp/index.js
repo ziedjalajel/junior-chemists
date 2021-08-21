@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 //styling
 import "./titration.css";
 import burette_stand from "./images/burette_stand.png";
@@ -21,6 +22,7 @@ import dropb1 from "./images/drop.png";
 import redcolor from "./images/flask_liquid_me.png";
 import pinkcolor from "./images/colorchaangeafterph.png";
 import dropb2 from "./images/drop.png";
+import arrowexp from "../../../images/arrowexp.png";
 //components
 import Procedure from "./Procedure";
 
@@ -30,6 +32,9 @@ const Titration = () => {
   }
   return (
     <>
+      <Link to="/choose-experiment">
+        <img src={arrowexp} alt="" className="backarrow" />
+      </Link>
       <button className="btn" onClick={refreshPage}>
         <p className="Repeats">Repeat</p>
       </button>

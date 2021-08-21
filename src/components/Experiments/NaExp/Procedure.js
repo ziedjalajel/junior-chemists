@@ -13,7 +13,7 @@ const Procedure = () => {
       setShow(
         Swal.fire({
           icon: "warning",
-          html: "You should <b>never</b> put Sodium (Na ) in water ,It will get <b>explode</b>",
+          html: "You should <b>never</b> put Sodium (Na ) in water ,It will <b>explode</b>",
         })
       );
     }, 9000);

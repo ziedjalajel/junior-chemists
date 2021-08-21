@@ -6,10 +6,14 @@ import DoorQuiz from "../../images/quizes-door.png";
 import PT from "../../images/pt.png";
 import Lab from "../../images/Ab7b.gif";
 import Quiz from "../../images/q.gif";
+import bg from "../../images/bg.png";
+import walking from "../../images/walking.gif";
+import opposit from "../../images/opposit.gif";
 
 const Home = () => {
   return (
     <div className="home">
+      <img className="home" src={bg} alt="" />
       <Link to="/choose-experiment">
         <div className="exp" type="button">
           <div>
@@ -20,6 +24,8 @@ const Home = () => {
           </div>
         </div>
       </Link>
+      <img src={walking} alt="" className="walking" />
+      <img src={opposit} alt="" className="opposit" />
       <img className="img3" src={PT} />
       <Link to="/team">
         <div className="quizes" type="button">

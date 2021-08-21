@@ -4,6 +4,9 @@ import { useHistory } from "react-router-dom";
 import { addAnswer } from "../../store/actions/answerAction";
 //components
 import QuestionDetail from "./QuestionDetail";
+//styling
+import marvel from "../../images/marvel.gif";
+import book from "../../images/book.jpg";
 
 const Questions = ({ socket }) => {
   const questions = useSelector((state) => state.questionReducer.questions);
@@ -28,6 +31,7 @@ const Questions = ({ socket }) => {
     });
     socket.on("newUser", (u) => {
       setmyUser(u);
+      console.log("hoon", u.username);
     });
     socket.on("startRoom", (a) => {
       setNumberOfUsers(a.users.length);
@@ -86,7 +90,8 @@ const Questions = ({ socket }) => {
             </div>
             <div></div>
           </form>
-          <div>
+          <div className="aya">
+            <p className="aya1">Players :</p>
             <p> {username !== null && username[0]}</p>
             <p> {username !== null && username[1]}</p>
             <p> {username !== null && username[2]}</p>
@@ -94,10 +99,23 @@ const Questions = ({ socket }) => {
         </>
       ) : (
         <>
-          <p>wait for people</p>
-          <p> {username !== null && username[0]}</p>
-          <p> {username !== null && username[1]}</p>
-          <p> {username !== null && username[2]}</p>
+          <div className="waiting">
+            <img src={book} alt="" className="runningbook" />
+            <p className="bepatient">
+              Be Patient {username !== null && myUser.username} ! !
+            </p>
+            <p className="wfop">Waiting for other player to join .</p>
+            <img src={marvel} alt="" className="deadpool" />
+
+            <p className="parap">
+              Players in room : {username !== null && `${username.length}/3`}
+            </p>
+            <div className="scroll">
+              <p className="usernameP"> {username !== null && username[0]}</p>
+              <p className="usernameP"> {username !== null && username[1]}</p>
+              <p className="usernameP"> {username !== null && username[2]}</p>
+            </div>
+          </div>
         </>
       )}
     </>
