@@ -90,7 +90,8 @@ const Questions = ({ socket }) => {
             </div>
             <div></div>
           </form>
-          <div>
+          <div className="aya">
+            <p className="aya1">Players :</p>
             <p> {username !== null && username[0]}</p>
             <p> {username !== null && username[1]}</p>
             <p> {username !== null && username[2]}</p>
@@ -103,7 +104,7 @@ const Questions = ({ socket }) => {
             <p className="bepatient">
               Be Patient {username !== null && myUser.username} ! !
             </p>
-            <p className="wfop">Wait other player to join .</p>
+            <p className="wfop">Waiting for other player to join .</p>
             <img src={marvel} alt="" className="deadpool" />
 
             <p className="parap">

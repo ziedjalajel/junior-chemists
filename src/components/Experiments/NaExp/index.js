@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 //styling
 import "./explosion.css";
 import bucket from "./images/waterbucket.png";
@@ -6,6 +7,7 @@ import NaPieces from "./images/Na.png";
 import kaboom from "./images/boom.gif";
 import fire from "./images/fire.gif";
 import broken from "./images/brokenbeaker.png";
+import arrowexp from "../../../images/arrowexp.png";
 //components
 import Procedure from "./Procedure";
 
@@ -15,6 +17,9 @@ const Explosion = () => {
   }
   return (
     <>
+      <Link to="/choose-experiment">
+        <img src={arrowexp} alt="" className="backarrow" />
+      </Link>
       <button className="btn" onClick={refreshPage}>
         <p className="Repeat">Repeat</p>
       </button>

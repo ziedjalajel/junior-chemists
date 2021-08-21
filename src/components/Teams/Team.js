@@ -5,10 +5,14 @@ import "./Test.css";
 
 import Private from "../../images/book2.png";
 import Dht from "../../images/DhT.png";
+import greyarrow from "../../images/greyarrow.png";
 
 const Team = () => {
   return (
     <div className="team">
+      <Link to="/">
+        <img src={greyarrow} alt="" className="backarrow" />
+      </Link>
       <Link to="/user">
         <div className="random">
           <figure className="book">

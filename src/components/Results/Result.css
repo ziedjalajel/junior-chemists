@@ -1,19 +1,12 @@
 .result {
-  background: url("../../images/tv.png");
   background-size: cover;
   position: absolute;
   width: 100%;
   height: 120%;
   bottom: 2%;
-  font-family: "kb3candystripesmedium";
+  font-family: "doodle";
 }
-@font-face {
-  font-family: "kb3candystripesmedium";
-  src: url("../../kb3candystripes-webfont.woff2") format("woff2"),
-    url("../../kb3candystripes-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
 .first {
   position: absolute;
   width: 500px;
@@ -55,4 +48,41 @@
   position: absolute;
   right: 55%;
   align-items: center;
+}
+.tv {
+  position: absolute;
+  height: 1100px;
+  top: 3%;
+  right: 10%;
+}
+.remote {
+  position: absolute;
+  height: 84%;
+  width: 60%;
+  top: 15%;
+  left: 60%;
+  z-index: 5;
+}
+.homeicon {
+  position: absolute;
+  z-index: 6;
+  height: 28px;
+  width: 30px;
+  left: 93.8%;
+  top: 22.55%;
+  cursor: pointer;
+  color: azure;
+}
+.again {
+  position: absolute;
+  z-index: 6;
+  height: 35px;
+  width: 80px;
+  left: 87%;
+  top: 52.7%;
+  padding: 25px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: x-large;
 }

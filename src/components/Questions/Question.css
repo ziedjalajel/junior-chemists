@@ -145,11 +145,8 @@ input[type="radio"]:checked:after {
   font-weight: bold;
 }
 .usernameP {
-  position: relative;
   left: 33%;
   font-size: xx-large;
-  top: 30%;
-  padding-top: 1%;
   font-weight: bolder;
 }
 .parap {
@@ -172,11 +169,23 @@ input[type="radio"]:checked:after {
   width: 113%;
 }
 .scroll {
-  position: relative;
+  position: absolute;
   overflow-y: auto;
-  /* width: 0px; */
+  width: 15%;
   height: 600px;
-  left: 27%;
-  top: 6.5%;
-  overflow-x: hidden;
+  left: 33%;
+  top: 32%;
+}
+.aya {
+  position: absolute;
+  font-family: "doodle";
+  font-weight: bold;
+  font-size: 25px;
+  top: 5%;
+  left: 2%;
+  overflow-y: auto;
+}
+.aya1 {
+  font-size: 35px;
+  padding-bottom: 9%;
 }

@@ -1,10 +1,24 @@
+import { Link } from "react-router-dom";
 // styling
 import "./Result.css";
 import { FaTrophy } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+import tv from "../../images/tv.png";
+import remote from "../../images/remote.png";
 
 const Result = () => {
   return (
     <div className="result">
+      <img src={tv} alt="" className="tv" />
+      <img src={remote} alt="" className="remote" />
+      <Link to="/user">
+        <div className="again" type="button">
+          Play Again
+        </div>
+      </Link>
+      <Link to="/">
+        <AiFillHome className="homeicon" />
+      </Link>
       <div className="first">
         <FaTrophy
           style={{

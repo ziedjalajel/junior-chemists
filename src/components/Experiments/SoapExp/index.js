@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 //styling
 import "./soapExp.css";
 import Spoon from "./images/spoon.png";
@@ -34,6 +35,7 @@ import soapdrop4 from "./images/soapdrop.png";
 import soapInMold from "./images/soapInMold.png";
 import soap from "./images/soap.png";
 import glassRod from "./images/glassRod.png";
+import arrowexp from "../../../images/arrowexp.png";
 //component
 import SoapProcedure from "./Procedure";
 
@@ -43,6 +45,9 @@ const Soap = () => {
   }
   return (
     <>
+      <Link to="/choose-experiment">
+        <img src={arrowexp} alt="" className="backarrow" />
+      </Link>
       <button className="btn" onClick={refreshPage}>
         <p className="Repeat">Repeat</p>
       </button>
