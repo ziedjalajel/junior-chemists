@@ -98,3 +98,6 @@
   padding: 1%;
   cursor: pointer;
 }
+.backarrow:hover {
+  margin-top: 10px;
+}

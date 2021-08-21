@@ -1,6 +1,5 @@
 import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
-import BeatLoader from "react-spinners/BeatLoader";
 import Routes from "./components/Routes";
 import { useSelector } from "react-redux";
 
@@ -17,8 +16,7 @@ function App() {
   const loadingChoices = useSelector((state) => state.choiceReducer.loading);
 
   const [socket, setSocket] = useState(null);
-  const username = "zied";
-  const room = "room1";
+
   useEffect(() => {
     setSocket(io("localhost:8000"));
   }, []);

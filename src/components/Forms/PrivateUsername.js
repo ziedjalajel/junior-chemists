@@ -7,7 +7,7 @@ import Go from "../../images/Picture2.png";
 import book from "../../images/book.jpg";
 import greyarrow from "../../images/greyarrow.png";
 
-const UsernameForm = ({ socket }) => {
+const PrivateUsername = ({ socket }) => {
   const history = useHistory();
   const [username, setUsername] = useState("");
 
@@ -18,12 +18,12 @@ const UsernameForm = ({ socket }) => {
     // socket.on("roomLength", (a) => {
     //   console.log(a);
     // });
-    history.push(`/rooms`);
+    history.push(`/private-room`);
   };
 
   return (
     <div className="user">
-      <Link to="/team">
+      <Link to="/creating-room">
         <img src={greyarrow} alt="" className="backarrow" />
       </Link>
       <img src={book} alt="" className="Book" />
@@ -45,4 +45,4 @@ const UsernameForm = ({ socket }) => {
     </div>
   );
 };
-export default UsernameForm;
+export default PrivateUsername;

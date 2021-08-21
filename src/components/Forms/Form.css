@@ -18,13 +18,13 @@
   position: absolute;
   font-size: 50px;
   z-index: 6;
-  top: 45%;
+  top: 42%;
   left: 15%;
 }
 .usernameform input {
   position: absolute;
   left: 55%;
-  bottom: 47%;
+  bottom: 50%;
   font-size: 32px;
   font-family: "doodle";
 }
@@ -34,6 +34,41 @@
   height: 160px;
   width: 160;
   left: 65%;
-  top: 60%;
+  top: 55%;
   z-index: 1;
+}
+.privateform input {
+  position: absolute;
+  left: 55%;
+  bottom: 42%;
+  font-size: 32px;
+  font-family: "doodle";
+}
+.roomname {
+  position: absolute;
+  font-size: 50px;
+  z-index: 6;
+  top: 20%;
+  left: 15%;
+}
+.nameofroom input {
+  position: absolute;
+  left: 55%;
+  top: 20%;
+  font-size: 32px;
+  font-family: "doodle";
+}
+.numpart input {
+  position: absolute;
+  left: 55%;
+  top: 36%;
+  font-size: 32px;
+  font-family: "doodle";
+}
+.number {
+  position: absolute;
+  font-size: 50px;
+  z-index: 6;
+  top: 35%;
+  left: 15%;
 }

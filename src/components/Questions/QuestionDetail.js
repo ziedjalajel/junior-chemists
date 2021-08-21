@@ -1,6 +1,3 @@
-//components
-import ChoiceDetail from "./ChoiceDetail";
-
 const QuestionDetail = ({ questions, answers, setAnswers }) => {
   const choice = questions.choices.map((c) => (
     <div className="form-check">

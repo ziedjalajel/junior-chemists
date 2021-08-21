@@ -10,6 +10,10 @@ import Team from "./Teams/Team";
 import Test from "./Teams/Test";
 import Home from "./Home/Home";
 import Soap from "./Experiments/SoapExp";
+import PrivateRoom from "./Questions/PrivateRoom";
+import PrivateRoomForm from "./Forms/PrivateRoomForm";
+import PrivateUsername from "./Forms/PrivateUsername";
+import PrivateResult from "./Results/PrivateResult";
 
 const Routes = ({ socket }) => {
   return (
@@ -19,6 +23,15 @@ const Routes = ({ socket }) => {
       </Route>
       <Route path="/rooms">
         <Room socket={socket} />
+      </Route>
+      <Route path="/privateroom-username">
+        <PrivateUsername socket={socket} />
+      </Route>
+      <Route path="/private-room">
+        <PrivateRoom socket={socket} />
+      </Route>
+      <Route path="/creating-room">
+        <PrivateRoomForm socket={socket} />
       </Route>
       <Route path="/user">
         <UsernameForm socket={socket} />
@@ -31,6 +44,9 @@ const Routes = ({ socket }) => {
       </Route>
       <Route path="/sodium-exp">
         <Explosion />
+      </Route>
+      <Route path="room-result">
+        <PrivateResult />
       </Route>
       <Route path="/results">
         <Result socket={socket} />

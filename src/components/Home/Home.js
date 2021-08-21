@@ -17,22 +17,20 @@ const Home = () => {
       <Link to="/choose-experiment">
         <div className="exp" type="button">
           <div>
-            <img className="inside1" src={Lab} />
+            <img className="inside1" src={Lab} alt="" />
           </div>
           <div className="door">
-            <img className="img1" src={DoorExp} />
+            <img className="img1" src={DoorExp} alt="" />
           </div>
         </div>
       </Link>
-      <img src={walking} alt="" className="walking" />
-      <img src={opposit} alt="" className="opposit" />
-      <img className="img3" src={PT} />
+      <img className="img3" src={PT} alt="" />
       <Link to="/team">
         <div className="quizes" type="button">
           <div>
-            <img className="inside2" src={Quiz} />
+            <img className="inside2" src={Quiz} alt="" />
           </div>
-          <img className="img2" src={DoorQuiz} />
+          <img className="img2" src={DoorQuiz} alt="" />
         </div>
       </Link>
     </div>
