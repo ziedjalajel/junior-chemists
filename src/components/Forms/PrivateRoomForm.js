@@ -22,7 +22,7 @@ const PrivateRoomForm = ({ socket }) => {
     event.preventDefault();
     dispatch(addRoom(team));
 
-    history.push(`/privateroom-username`);
+    // history.push(`/privateroom-username`);
   };
 
   return (
@@ -53,10 +53,14 @@ const PrivateRoomForm = ({ socket }) => {
           onChange={handleChange}
         /> */}
         </div>
+        <div className="vector" onClick={handleSubmit}>
+          <Link to="/privateroom-username">
+            <div type="button" className="vector">
+              <img src={Go} alt="" />
+            </div>
+          </Link>
+        </div>
       </form>
-      <div className="vector" type="button">
-        <img src={Go} onClick={handleSubmit} alt="" />
-      </div>
     </div>
   );
 };

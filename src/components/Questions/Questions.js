@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { addAnswer } from "../../store/actions/answerAction";
 //components
 import QuestionDetail from "./QuestionDetail";
+import Username from "./Username";
 //styling
 import marvel from "../../images/marvel.gif";
 import book from "../../images/book.jpg";
@@ -21,6 +22,7 @@ const Questions = ({ socket }) => {
   const [username, setUsername] = useState(null);
 
   const history = useHistory();
+  let usernames;
 
   useEffect(() => {
     let myQuestion;
@@ -60,6 +62,7 @@ const Questions = ({ socket }) => {
           myAnswers.map((a) =>
             dispatch(addAnswer(a.roomId, a.questionId, a.choiceId, a.userId))
           );
+          socket.emit("myAnswers", myAnswers);
           history.push(`/results`);
           // setTimeout(() => history.push(`/results`), 5000);
         }
@@ -71,6 +74,9 @@ const Questions = ({ socket }) => {
     if (questions) setQuestion(questions.find((q) => q.id === questions[0].id));
   }, [questions]);
   if (!question) return <div></div>;
+
+  if (username !== null)
+    usernames = username.map((user) => <Username user={user} />);
 
   return (
     <>
@@ -92,9 +98,10 @@ const Questions = ({ socket }) => {
           </form>
           <div className="aya">
             <p className="aya1">Players :</p>
-            <p> {username !== null && username[0]}</p>
+            {usernames}
+            {/* <p> {username !== null && username[0]}</p>
             <p> {username !== null && username[1]}</p>
-            <p> {username !== null && username[2]}</p>
+            <p> {username !== null && username[2]}</p> */}
           </div>
         </>
       ) : (
@@ -111,9 +118,10 @@ const Questions = ({ socket }) => {
               Players in room : {username !== null && `${username.length}/3`}
             </p>
             <div className="scroll">
-              <p className="usernameP"> {username !== null && username[0]}</p>
+              {usernames}
+              {/* <p className="usernameP"> {username !== null && username[0]}</p>
               <p className="usernameP"> {username !== null && username[1]}</p>
-              <p className="usernameP"> {username !== null && username[2]}</p>
+              <p className="usernameP"> {username !== null && username[2]}</p> */}
             </div>
           </div>
         </>
