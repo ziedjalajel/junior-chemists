@@ -6,7 +6,7 @@ import { addAnswer } from "../../store/actions/answerAction";
 import QuestionDetail from "./QuestionDetail";
 import Username from "./Username";
 //styling
-import marvel from "../../images/marvel.gif";
+import marvel from "../../images/deadpool.gif";
 import book from "../../images/book.jpg";
 
 const Questions = ({ socket }) => {
@@ -46,7 +46,7 @@ const Questions = ({ socket }) => {
       if (seconds > 0) {
         setTimeout(() => setSeconds(seconds - 1), 1000);
       } else {
-        myQuestion = questions.find((q) => q.id === question.id + 1);
+        myQuestion = questions[questions.indexOf(question) + 1];
         if (myQuestion) {
           setSeconds(5);
           setQuestion(myQuestion);
@@ -71,7 +71,7 @@ const Questions = ({ socket }) => {
   }, [seconds, numberOfUsers]);
 
   useEffect(() => {
-    if (questions) setQuestion(questions.find((q) => q.id === questions[0].id));
+    if (questions) setQuestion(questions[0]);
   }, [questions]);
   if (!question) return <div></div>;
 
