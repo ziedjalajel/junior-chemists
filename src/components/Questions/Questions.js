@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { addAnswer } from "../../store/actions/answerAction";
 //components
 import QuestionDetail from "./QuestionDetail";
+import Username from "./Username";
 
 const Questions = ({ socket }) => {
   const questions = useSelector((state) => state.questionReducer.questions);
@@ -19,6 +20,8 @@ const Questions = ({ socket }) => {
   const [username, setUsername] = useState(null);
 
   const history = useHistory();
+
+  let usernames;
 
   useEffect(() => {
     let myQuestion;
@@ -87,6 +90,9 @@ const Questions = ({ socket }) => {
   //   }
   // }
 
+  if (username !== null)
+    usernames = username.map((user) => <Username user={user} />);
+
   return (
     <>
       {numberOfUsers === 3 ? (
@@ -106,17 +112,19 @@ const Questions = ({ socket }) => {
             <div></div>
           </form>
           <div>
-            <p> {username !== null && username[0]}</p>
+            {usernames}
+            {/* <p> {username !== null && username[0]}</p>
             <p> {username !== null && username[1]}</p>
-            <p> {username !== null && username[2]}</p>
+            <p> {username !== null && username[2]}</p> */}
           </div>
         </>
       ) : (
         <>
           <p>wait for people</p>
-          <p> {username !== null && username[0]}</p>
+          {usernames}
+          {/* <p> {username !== null && username[0]}</p>
           <p> {username !== null && username[1]}</p>
-          <p> {username !== null && username[2]}</p>
+          <p> {username !== null && username[2]}</p> */}
         </>
       )}
     </>

@@ -15,44 +15,45 @@ const Result = ({ socket }) => {
   const [changingState, setChangingState] = useState(0);
 
   let score = 0;
+  let everyUser;
+  let sortByScore;
 
   useEffect(() => {
     socket.emit("resultEmit", 5);
     socket.on("create-connection", (answers, userId) => {
       setRoomAnswers(answers);
       setUserId(userId);
-      console.log(userId);
+
       //we but this use state so the use effect that is under will br rerendering and the socket inside it will work
       setChangingState(2);
     });
-  }, []);
 
-  if (roomAnswers.length !== 0) {
-    const results = allChoices.filter(({ id: id1 }) =>
-      roomAnswers.some(({ choiceId: id2 }) => id2 === id1)
-    );
+    if (roomAnswers.length !== 0) {
+      const results = allChoices.filter(({ id: id1 }) =>
+        roomAnswers.some(({ choiceId: id2 }) => id2 === id1)
+      );
 
-    for (let i = 0; i < results.length; i++) {
-      score = results[i].point + score;
+      for (let i = 0; i < results.length; i++) {
+        score = results[i].point + score;
+      }
     }
-    // console.log(score);
-  }
 
-  // setChangingState(50);
-  // console.log(changingState);
-  let everyUser;
-  useEffect(() => {
     if (userId !== null) {
       socket.emit("score", score, userId);
 
       socket.on("usersScores", (scores) => {
         setUserScore(scores);
-        // setUsername(scores);
       });
     }
   }, [changingState]); //we create this state so this useEffect will work
 
-  everyUser = userScore.map((user) => <UserScores user={user} key={user.id} />);
+  sortByScore = userScore.sort((a, b) => {
+    return b.score - a.score;
+  });
+
+  everyUser = sortByScore.map((user) => (
+    <UserScores user={user} key={user.id} />
+  ));
 
   return (
     <div className="result">

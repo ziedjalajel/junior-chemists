@@ -1,5 +1,4 @@
 const UserScores = ({ user }) => {
-  if (user.score !== null) console.log(user);
   return (
     <>
       {user.score !== null && (
