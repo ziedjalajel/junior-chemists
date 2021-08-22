@@ -49,11 +49,11 @@
   right: 55%;
   align-items: center;
 }
-.tv {
+.resultbook {
   position: absolute;
-  height: 1100px;
-  top: 3%;
-  right: 10%;
+  height: 100%;
+  width: 100%;
+  top: 10%;
 }
 .remote {
   position: absolute;
@@ -66,23 +66,23 @@
 .homeicon {
   position: absolute;
   z-index: 6;
-  height: 28px;
-  width: 30px;
-  left: 93.8%;
+  height: 40px;
+  width: 40px;
+  left: 5%;
   top: 22.55%;
   cursor: pointer;
-  color: azure;
+  color: white;
 }
 .again {
   position: absolute;
   z-index: 6;
   height: 35px;
   width: 80px;
-  left: 87%;
-  top: 52.7%;
+  left: 90%;
+  top: 20%;
   padding: 25px;
   cursor: pointer;
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: x-large;
 }

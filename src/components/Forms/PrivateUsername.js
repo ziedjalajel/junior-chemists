@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 //styling
 import "./Form.css";
+import Swal from "sweetalert2";
+import "animate.css";
 import Go from "../../images/Picture2.png";
 import book from "../../images/book.jpg";
 import greyarrow from "../../images/greyarrow.png";
@@ -10,6 +12,20 @@ import greyarrow from "../../images/greyarrow.png";
 const PrivateUsername = ({ socket }) => {
   const history = useHistory();
   const [username, setUsername] = useState("");
+  const hayder = "hello";
+  Swal.fire({
+    icon: "info",
+    html:
+      "Copy <b>Link</b> and send it to your friends,<br/>" +
+      `<a href=http://localhost:3000/${hayder}>http://localhost:3000/${hayder}</a> ` +
+      "<br/><b>Don't forget to enter your username ",
+    showClass: {
+      popup: "animate__animated animate__fadeInDown",
+    },
+    hideClass: {
+      popup: "animate__animated animate__fadeOutUp",
+    },
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
