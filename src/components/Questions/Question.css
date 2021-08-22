@@ -121,22 +121,8 @@ input[type="radio"]:checked:after {
   height: 50%;
   width: 50%;
   padding-top: 2%;
-  animation: image 3s infinite linear both;
 }
-@keyframes image {
-  0% {
-    transform: translateX(75%);
-    visibility: hidden;
-  }
-  50% {
-    transform: translateX(105%);
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(135%);
-    visibility: hidden;
-  }
-}
+
 .bepatient {
   position: absolute;
   top: 45%;
