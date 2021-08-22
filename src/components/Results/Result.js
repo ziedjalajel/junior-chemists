@@ -2,21 +2,61 @@
 import "./Result.css";
 // import { FaTrophy } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+//component
+import UserScores from "./UserScores";
 
 const Result = ({ socket }) => {
-  const [roomAnswers, setRoomAnswers] = useState({});
+  const allChoices = useSelector((state) => state.choiceReducer.choices);
+  const [roomAnswers, setRoomAnswers] = useState([]);
+  const [userId, setUserId] = useState(null);
+  const [userScore, setUserScore] = useState([]);
+  const [changingState, setChangingState] = useState(0);
+
+  let score = 0;
+
   useEffect(() => {
     socket.emit("resultEmit", 5);
-    socket.on("create-connection", (answers) => {
+    socket.on("create-connection", (answers, userId) => {
       setRoomAnswers(answers);
-
-      console.log("hhee", answers[0]);
+      setUserId(userId);
+      console.log(userId);
+      //we but this use state so the use effect that is under will br rerendering and the socket inside it will work
+      setChangingState(2);
     });
   }, []);
 
+  if (roomAnswers.length !== 0) {
+    const results = allChoices.filter(({ id: id1 }) =>
+      roomAnswers.some(({ choiceId: id2 }) => id2 === id1)
+    );
+
+    for (let i = 0; i < results.length; i++) {
+      score = results[i].point + score;
+    }
+    // console.log(score);
+  }
+
+  // setChangingState(50);
+  // console.log(changingState);
+  let everyUser;
+  useEffect(() => {
+    if (userId !== null) {
+      socket.emit("score", score, userId);
+
+      socket.on("usersScores", (scores) => {
+        setUserScore(scores);
+        // setUsername(scores);
+      });
+    }
+  }, [changingState]); //we create this state so this useEffect will work
+
+  everyUser = userScore.map((user) => <UserScores user={user} key={user.id} />);
+
   return (
     <div className="result">
+      {everyUser}
       <div className="first">
         {/* <FaTrophy
           style={{
@@ -28,7 +68,6 @@ const Result = ({ socket }) => {
             marginBottom: "5%",
           }}
         /> */}
-        <h1>Winner !!</h1>
       </div>
       <div className="second">
         {/* <FaTrophy
@@ -54,7 +93,6 @@ const Result = ({ socket }) => {
         /> */}
         <h1>Loser 2 !!</h1>
       </div>
-      <div className="rest"></div>
     </div>
   );
 };
