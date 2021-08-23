@@ -8,7 +8,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_QUESTIONS:
-      console.log(action.payload);
       return {
         ...state,
         questions: action.payload,

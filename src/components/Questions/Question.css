@@ -117,10 +117,28 @@ input[type="radio"]:checked:after {
 }
 .deadpool {
   position: absolute;
-  left: 5%;
-  height: 50%;
-  width: 50%;
-  padding-top: 2%;
+  left: 65%;
+  height: 25%;
+  width: 25%;
+  top: 18%;
+  animation: deadpool 6s linear infinite both;
+}
+@keyframes deadpool {
+  0% {
+    transform: translateX(-35%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateX(35%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  0% {
+    transform: translateX(35%);
+  }
 }
 
 .bepatient {
@@ -145,7 +163,7 @@ input[type="radio"]:checked:after {
 .wfop {
   position: absolute;
   top: 60%;
-  left: 70%;
+  left: 66%;
   font-size: xx-large;
 }
 .runningbook {

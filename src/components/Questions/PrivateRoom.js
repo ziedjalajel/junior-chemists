@@ -31,7 +31,6 @@ const PrivateRoom = ({ socket }) => {
     });
     socket.on("newUser", (u) => {
       setmyUser(u);
-      console.log("hoon", u.username);
     });
     socket.on("startRoom", (a) => {
       setNumberOfUsers(a.users.length);
@@ -84,6 +83,7 @@ const PrivateRoom = ({ socket }) => {
                   questions={question}
                   answers={answers}
                   setAnswers={setAnswers}
+                  key={question.id}
                 />
                 <h6>Time Left : {seconds} s</h6>
               </div>

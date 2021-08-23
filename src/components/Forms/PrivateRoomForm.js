@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { addRoom } from "../../store/actions/roomAction";
 //styling
 import "./Form.css";
+import "animate.css";
+import Swal from "sweetalert2";
 import Go from "../../images/Picture2.png";
 import book from "../../images/book.jpg";
 import greyarrow from "../../images/greyarrow.png";
@@ -21,9 +23,24 @@ const PrivateRoomForm = ({ socket }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addRoom(team));
+    Swal.fire({
+      icon: "info",
+      html:
+        "Copy <b>Link</b> and send it to your friends,<br/>" +
+        `<a http://localhost:3000/${hayder}>http://localhost:3000/${hayder}</a> ` +
+        "<br/><b>Don't forget to enter your username ",
+      width: "600px",
+      showClass: {
+        popup: "animate__animated animate__bounce",
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutUp",
+      },
+    });
 
-    // history.push(`/privateroom-username`);
+    history.push(`/privateroom-username`);
   };
+  const hayder = "hello";
 
   return (
     <div className="user">
@@ -38,7 +55,7 @@ const PrivateRoomForm = ({ socket }) => {
             className="roomnameinput"
             name="name"
             type="text"
-            placeholder="..."
+            placeholder="Room name is required"
             value={team.name}
             onChange={handleChange}
           />
@@ -54,11 +71,17 @@ const PrivateRoomForm = ({ socket }) => {
         /> */}
         </div>
         <div className="vector" onClick={handleSubmit}>
-          <Link to="/privateroom-username">
-            <div type="button" className="vector">
-              <img src={Go} alt="" />
+          {team.name === "" ? (
+            <div className="vector" style={{ color: "red", zIndex: "6" }}>
+              Room name is required
             </div>
-          </Link>
+          ) : (
+            <Link to="/privateroom-username">
+              <div type="button" className="vector">
+                <img src={Go} alt="" />
+              </div>
+            </Link>
+          )}
         </div>
       </form>
     </div>

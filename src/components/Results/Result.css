@@ -1,4 +1,4 @@
-/* .result {
+.result {
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -9,46 +9,23 @@
 
 .first {
   position: absolute;
-  width: 500px;
-  height: 50px;
-  background: linear-gradient(180deg, #bebfd7 0%, rgba(118, 122, 228, 0) 100%);
-  color: white;
-  bottom: 65%;
-  left: 30%;
+  width: 300px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.4);
+  color: black;
+  top: 35%;
+  left: 40%;
+  border-radius: 50px;
+  overflow-y: scroll;
 }
 .first > h1 {
-  position: absolute;
-  right: 55%;
+  position: relative;
+  left: 25%;
+  top: 15%;
+  z-index: 6;
   align-items: center;
 }
-.second {
-  position: absolute;
-  width: 500px;
-  height: 50px;
-  background: linear-gradient(180deg, #bebfd7 0%, rgba(118, 122, 228, 0) 100%);
-  color: white;
-  bottom: 50%;
-  left: 30%;
-}
-.second > h1 {
-  position: absolute;
-  right: 55%;
-  align-items: center;
-}
-.third {
-  position: absolute;
-  width: 500px;
-  height: 50px;
-  background: linear-gradient(180deg, #bebfd7 0%, rgba(118, 122, 228, 0) 100%);
-  color: white;
-  bottom: 35%;
-  left: 30%;
-}
-.third > h1 {
-  position: absolute;
-  right: 55%;
-  align-items: center;
-}
+
 .resultbook {
   position: absolute;
   height: 100%;
@@ -85,4 +62,30 @@
   color: white;
   font-weight: bold;
   font-size: x-large;
-} */
+}
+.first {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.first::-webkit-scrollbar {
+  display: none;
+}
+.title {
+  position: absolute;
+  color: white;
+  top: 22%;
+  left: 40%;
+  font-size: 50px;
+  font-weight: bold;
+  z-index: 5;
+}
+.points {
+  color: red;
+  padding-left: 15px;
+}
+.relative {
+  position: relative;
+  display: flex;
+}

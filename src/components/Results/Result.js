@@ -55,12 +55,11 @@ const Result = ({ socket }) => {
   everyUser = sortByScore.map((user) => (
     <UserScores user={user} key={user.id} />
   ));
-  // console.log(everyUser);
   return (
     <div className="result">
-      {everyUser}
-      {/* <img src={result} alt="" className="resultbook" /> */}
-      {/* <Link to="/user">
+      <img src={result} alt="" className="resultbook" />
+      <div className="title">Score Board</div>
+      <Link to="/user">
         <div className="again" type="button">
           Play Again
         </div>
@@ -69,15 +68,10 @@ const Result = ({ socket }) => {
         <AiFillHome className="homeicon" />
       </Link>
       <div className="first">
-        <h1>Winner !!</h1>
+        {/* <h1>{everyUser}</h1> */}
+        <h1>{everyUser}</h1>
+        {/* <h1 style={{ color: "red" }}>{everyUser[1]}</h1> */}
       </div>
-      <div className="second">
-        <h1>Loser 1 !!</h1>
-      </div>
-      <div className="third">
-        <h1>Loser 2 !!</h1>
-      </div>
-      <div className="rest"></div> */}
     </div>
   );
 };

@@ -21,7 +21,6 @@ export const questionDetail = (questionId) => {
   return async (dispatch) => {
     try {
       const res = await instance.get(`/questions/${questionId}`);
-      console.log("honak:", res);
       dispatch({
         type: actionTypes.DETAIL_QUESTION,
         payload: res.data,

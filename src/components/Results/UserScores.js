@@ -1,13 +1,12 @@
 const UserScores = ({ user }) => {
-  console.log("user :", user);
-
   return (
     <>
       {user.score !== null && (
         <>
-          <h3>
-            {user.username} : {user.score}
-          </h3>
+          <div className="relative">
+            <h3>{user.username} :</h3>
+            <h3 className="points">{user.score}</h3>
+          </div>
         </>
       )}
     </>

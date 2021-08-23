@@ -6,7 +6,7 @@ import { addAnswer } from "../../store/actions/answerAction";
 import QuestionDetail from "./QuestionDetail";
 import Username from "./Username";
 //styling
-import marvel from "../../images/deadpool.gif";
+import marvel from "../../images/waiting.gif";
 import book from "../../images/book.jpg";
 
 const Questions = ({ socket }) => {
@@ -33,7 +33,6 @@ const Questions = ({ socket }) => {
     });
     socket.on("newUser", (u) => {
       setmyUser(u);
-      console.log("hoon", u.username);
     });
     socket.on("startRoom", (a) => {
       setNumberOfUsers(a.users.length);
@@ -76,7 +75,7 @@ const Questions = ({ socket }) => {
   if (!question) return <div></div>;
 
   if (username !== null)
-    usernames = username.map((user) => <Username user={user} />);
+    usernames = username.map((user) => <Username user={user} key={user.id} />);
 
   return (
     <>
@@ -90,6 +89,7 @@ const Questions = ({ socket }) => {
                   questions={question}
                   answers={answers}
                   setAnswers={setAnswers}
+                  key={question.id}
                 />
                 <h6>Time Left : {seconds} s</h6>
               </div>
@@ -99,9 +99,6 @@ const Questions = ({ socket }) => {
           <div className="aya">
             <p className="aya1">Players :</p>
             {usernames}
-            {/* <p> {username !== null && username[0]}</p>
-            <p> {username !== null && username[1]}</p>
-            <p> {username !== null && username[2]}</p> */}
           </div>
         </>
       ) : (
@@ -118,10 +115,7 @@ const Questions = ({ socket }) => {
               Players in room : {username !== null && `${username.length}/3`}
             </p>
             <div className="scroll">
-              {usernames}
-              {/* <p className="usernameP"> {username !== null && username[0]}</p>
-              <p className="usernameP"> {username !== null && username[1]}</p>
-              <p className="usernameP"> {username !== null && username[2]}</p> */}
+              <div className="usernameP">{usernames}</div>
             </div>
           </div>
         </>
