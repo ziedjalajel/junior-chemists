@@ -17,10 +17,11 @@ const PrivateRoom = ({ socket }) => {
   const dispatch = useDispatch();
 
   const [room, setRoom] = useState({});
-  const [myUser, setmyUser] = useState(null);
+  const [myUser, setmyUser] = useState({});
   const [numberOfUsers, setNumberOfUsers] = useState(null);
   const [username, setUsername] = useState(null);
   const [maxParticipants, setMaxParticipants] = useState(0);
+  const [usersId, setUsersId] = useState(0);
 
   const [starting, setStrating] = useState([]);
   // const [value, setValue] = useState(0);
@@ -47,9 +48,12 @@ const PrivateRoom = ({ socket }) => {
     });
     socket.on("startPrivateRoom", (u) => {
       setMaxParticipants(u.privateRoom.participant);
+      setUsersId(u.usersIds);
+      console.log(u.usersIds);
     });
     socket.on("newUserPrivate", (u) => {
       setmyUser(u);
+      console.log(u);
     });
     socket.on("startPrivateRoom", (a) => {
       setNumberOfUsers(a.users.length);
@@ -123,7 +127,9 @@ const PrivateRoom = ({ socket }) => {
         </>
       ) : (
         <>
-          {/* <button onClick={() => setStrating()}>start</button> */}
+          {/* {usersId[0] === myUser.id && (
+            <button onClick={() => setStrating()}>start</button>
+          )} */}
           <div className="waiting">
             <img src={book} alt="" className="runningbook" />
             <p className="bepatient">
