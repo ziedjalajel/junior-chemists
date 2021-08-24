@@ -6,7 +6,7 @@ const QuestionDetail = ({ questions, answers, setAnswers }) => {
         type="radio"
         name={questions.id}
         value={c.id}
-        // checked={answers[questions.id] === c.id}
+        checked={answers[questions.id] === c.id}
         style={{ backgroundColor: "#A6A6A4" }}
       />
       <label className="form-check-label"> {c.text}</label>

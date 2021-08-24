@@ -75,7 +75,7 @@ const Questions = ({ socket }) => {
   if (!question) return <div></div>;
 
   if (username !== null)
-    usernames = username.map((user) => <Username user={user} key={user.id} />);
+    usernames = username.map((user) => <Username user={user} />);
 
   return (
     <>
@@ -89,7 +89,6 @@ const Questions = ({ socket }) => {
                   questions={question}
                   answers={answers}
                   setAnswers={setAnswers}
-                  key={question.id}
                 />
                 <h6>Time Left : {seconds} s</h6>
               </div>

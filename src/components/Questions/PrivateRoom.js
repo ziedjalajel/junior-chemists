@@ -83,7 +83,6 @@ const PrivateRoom = ({ socket }) => {
                   questions={question}
                   answers={answers}
                   setAnswers={setAnswers}
-                  key={question.id}
                 />
                 <h6>Time Left : {seconds} s</h6>
               </div>

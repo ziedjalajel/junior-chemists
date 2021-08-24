@@ -52,9 +52,7 @@ const Result = ({ socket }) => {
     return b.score - a.score;
   });
 
-  everyUser = sortByScore.map((user) => (
-    <UserScores user={user} key={user.id} />
-  ));
+  everyUser = sortByScore.map((user) => <UserScores user={user} />);
   return (
     <div className="result">
       <img src={result} alt="" className="resultbook" />
