@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { addAnswer } from "../../store/actions/answerAction";
 //components
 import QuestionDetail from "./QuestionDetail";
+import Username from "./Username";
 //styling
 import marvel from "../../images/marvel.gif";
 import book from "../../images/book.jpg";
@@ -19,28 +20,44 @@ const PrivateRoom = ({ socket }) => {
   const [myUser, setmyUser] = useState(null);
   const [numberOfUsers, setNumberOfUsers] = useState(null);
   const [username, setUsername] = useState(null);
+  const [maxParticipants, setMaxParticipants] = useState(0);
 
+  const [starting, setStrating] = useState(0);
+  const [value, setValue] = useState(0);
   const history = useHistory();
+
+  const { roomSlug } = useParams();
+
+  let usernames;
 
   useEffect(() => {
     let myQuestion;
     let myAnswers = [];
 
-    socket.on("startRoom", (u) => {
+    // if (starting === 2) {
+    //   socket.emit("startGame", 5);
+    //   socket.on("letsStart", (n) => {
+    //     setStrating(n);
+    //     setNumberOfUsers(n.length);
+    //   });
+    // }
+
+    socket.on("startPrivateRoom", (u) => {
       setRoom(u);
     });
-    socket.on("newUser", (u) => {
-      setmyUser(u);
-      console.log("hoon", u.username);
+    socket.on("startPrivateRoom", (u) => {
+      setMaxParticipants(u.privateRoom.participant);
     });
-    socket.on("startRoom", (a) => {
+    socket.on("newUserPrivate", (u) => {
+      setmyUser(u);
+    });
+    socket.on("startPrivateRoom", (a) => {
       setNumberOfUsers(a.users.length);
     });
 
-    socket.on("startRoom", (a) => {
+    socket.on("startPrivateRoom", (a) => {
       setUsername(a.users);
     });
-    //without number of participants
 
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000);
@@ -52,7 +69,7 @@ const PrivateRoom = ({ socket }) => {
       } else {
         for (const key in answers) {
           myAnswers.push({
-            roomId: room.myRoom.id,
+            roomId: room.privateRoom.id,
             questionId: +key,
             choiceId: answers[key],
             userId: myUser.id,
@@ -61,8 +78,10 @@ const PrivateRoom = ({ socket }) => {
         myAnswers.map((a) =>
           dispatch(addAnswer(a.roomId, a.questionId, a.choiceId, a.userId))
         );
-        history.push(`/room-result`);
-        // setTimeout(() => history.push(`/results`), 5000);
+        socket.emit("myAnswersPrivate", myAnswers);
+        history.push(
+          `/privateroom-username/${roomSlug}/private-room/room-result`
+        );
       }
     }
   }, [seconds, numberOfUsers]);
@@ -72,9 +91,12 @@ const PrivateRoom = ({ socket }) => {
   }, [questions]);
   if (!question) return <div></div>;
 
+  if (username !== null)
+    usernames = username.map((user) => <Username user={user} />);
+
   return (
     <>
-      {numberOfUsers === 3 ? (
+      {numberOfUsers === maxParticipants ? (
         <>
           <form>
             <div className="lines"></div>
@@ -92,13 +114,16 @@ const PrivateRoom = ({ socket }) => {
           </form>
           <div className="aya">
             <p className="aya1">Players :</p>
-            <p> {username !== null && username[0]}</p>
-            <p> {username !== null && username[1]}</p>
-            <p> {username !== null && username[2]}</p>
+            {usernames}
           </div>
         </>
       ) : (
         <>
+          <p>hello</p>
+          <br />
+          <br />
+          <br />
+          <button onClick={() => setStrating(2)}>start</button>
           <div className="waiting">
             <img src={book} alt="" className="runningbook" />
             <p className="bepatient">
@@ -108,13 +133,10 @@ const PrivateRoom = ({ socket }) => {
             <img src={marvel} alt="" className="deadpool" />
 
             <p className="parap">
-              Players in room : {username !== null && `${username.length}/3`}
+              Players in room :{" "}
+              {username !== null && `${username.length}/${maxParticipants}`}
             </p>
-            <div className="scroll">
-              <p className="usernameP"> {username !== null && username[0]}</p>
-              <p className="usernameP"> {username !== null && username[1]}</p>
-              <p className="usernameP"> {username !== null && username[2]}</p>
-            </div>
+            <div className="scroll">{usernames}</div>
           </div>
         </>
       )}

@@ -18,17 +18,20 @@ import PrivateResult from "./Results/PrivateResult";
 const Routes = ({ socket }) => {
   return (
     <Switch>
+      <Route path="/privateroom-username/:roomSlug/private-room/room-result">
+        <PrivateResult socket={socket} />
+      </Route>
+      <Route path="/privateroom-username/:roomSlug/private-room">
+        <PrivateRoom socket={socket} />
+      </Route>
+      <Route path="/privateroom-username/:roomSlug">
+        <PrivateUsername socket={socket} />
+      </Route>
       <Route path="/test">
         <Test />
       </Route>
       <Route path="/rooms">
         <Room socket={socket} />
-      </Route>
-      <Route path="/privateroom-username">
-        <PrivateUsername socket={socket} />
-      </Route>
-      <Route path="/private-room">
-        <PrivateRoom socket={socket} />
       </Route>
       <Route path="/creating-room">
         <PrivateRoomForm socket={socket} />
@@ -44,9 +47,6 @@ const Routes = ({ socket }) => {
       </Route>
       <Route path="/sodium-exp">
         <Explosion />
-      </Route>
-      <Route path="room-result">
-        <PrivateResult />
       </Route>
       <Route path="/results">
         <Result socket={socket} />
