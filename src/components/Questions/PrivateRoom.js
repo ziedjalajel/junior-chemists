@@ -22,8 +22,8 @@ const PrivateRoom = ({ socket }) => {
   const [username, setUsername] = useState(null);
   const [maxParticipants, setMaxParticipants] = useState(0);
 
-  const [starting, setStrating] = useState(0);
-  const [value, setValue] = useState(0);
+  // const [starting, setStrating] = useState(0);
+  // const [value, setValue] = useState(0);
   const history = useHistory();
 
   const { roomSlug } = useParams();
