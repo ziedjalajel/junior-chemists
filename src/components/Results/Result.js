@@ -66,9 +66,7 @@ const Result = ({ socket }) => {
         <AiFillHome className="homeicon" />
       </Link>
       <div className="first">
-        {/* <h1>{everyUser}</h1> */}
         <h1>{everyUser}</h1>
-        {/* <h1 style={{ color: "red" }}>{everyUser[1]}</h1> */}
       </div>
     </div>
   );

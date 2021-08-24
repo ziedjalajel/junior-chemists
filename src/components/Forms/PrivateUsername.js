@@ -37,10 +37,11 @@ const PrivateUsername = ({ socket }) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-
-        <div className="vector" type="button">
-          <img src={Go} onClick={handleSubmit} alt="" />
-        </div>
+        {username !== "" && (
+          <div className="vector" type="button">
+            <img src={Go} onClick={handleSubmit} alt="" />
+          </div>
+        )}
       </div>
     </div>
   );

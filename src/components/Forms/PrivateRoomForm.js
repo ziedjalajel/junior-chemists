@@ -53,7 +53,7 @@ const PrivateRoomForm = ({ socket }) => {
             className="roomnameinput"
             name="name"
             type="text"
-            placeholder="..."
+            placeholder="Room name is required"
             value={team.name}
             onChange={handleChange}
           />
@@ -69,11 +69,13 @@ const PrivateRoomForm = ({ socket }) => {
             onChange={handleChange}
           />
         </div>
-        <div className="vector" onClick={handleSubmit}>
-          <div type="submit" className="vector">
-            <img src={Go} alt="" />
+        {team.name !== "" && (
+          <div className="vector" onClick={handleSubmit}>
+            <div type="submit" className="vector">
+              <img src={Go} alt="" />
+            </div>
           </div>
-        </div>
+        )}
       </form>
     </div>
   );

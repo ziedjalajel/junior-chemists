@@ -6,7 +6,6 @@
   bottom: 2%;
   font-family: "doodle";
 }
-
 .first {
   position: absolute;
   width: 300px;
@@ -25,7 +24,6 @@
   z-index: 6;
   align-items: center;
 }
-
 .resultbook {
   position: absolute;
   height: 100%;
@@ -68,7 +66,6 @@
   scrollbar-width: none;
   overflow-y: scroll;
 }
-
 .first::-webkit-scrollbar {
   display: none;
 }
@@ -82,10 +79,11 @@
   z-index: 5;
 }
 .points {
-  color: red;
-  padding-left: 15px;
+  color: rgb(138, 8, 8);
+  padding-left: 10px;
 }
 .relative {
   position: relative;
   display: flex;
+  margin-left: -35px;
 }

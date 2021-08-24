@@ -6,7 +6,7 @@ import { addAnswer } from "../../store/actions/answerAction";
 import QuestionDetail from "./QuestionDetail";
 import Username from "./Username";
 //styling
-import marvel from "../../images/marvel.gif";
+import marvel from "../../images/waiting.gif";
 import book from "../../images/book.jpg";
 
 const PrivateRoom = ({ socket }) => {
@@ -22,7 +22,7 @@ const PrivateRoom = ({ socket }) => {
   const [username, setUsername] = useState(null);
   const [maxParticipants, setMaxParticipants] = useState(0);
 
-  const [starting, setStrating] = useState(0);
+  const [starting, setStrating] = useState([]);
   // const [value, setValue] = useState(0);
   const history = useHistory();
 
@@ -34,9 +34,9 @@ const PrivateRoom = ({ socket }) => {
     let myQuestion;
     let myAnswers = [];
 
-    // if (starting === 2) {
+    // if (starting === username[0]) {
     //   socket.emit("startGame", 5);
-    //   socket.on("letsStart", (n) => {
+    //   socket.on("startPrivateRoom", (n) => {
     //     setStrating(n);
     //     setNumberOfUsers(n.length);
     //   });
@@ -80,9 +80,12 @@ const PrivateRoom = ({ socket }) => {
         );
         socket.emit("myAnswersPrivate", myAnswers);
         console.log(myAnswers);
-        history.push(
-          `/privateroom-username/${roomSlug}/private-room/room-result`
-        );
+        {
+          numberOfUsers === maxParticipants &&
+            history.push(
+              `/privateroom-username/${roomSlug}/private-room/room-result`
+            );
+        }
       }
     }
   }, [seconds, numberOfUsers]);
@@ -120,11 +123,7 @@ const PrivateRoom = ({ socket }) => {
         </>
       ) : (
         <>
-          <p>hello</p>
-          <br />
-          <br />
-          <br />
-          <button onClick={() => setStrating(2)}>start</button>
+          {/* <button onClick={() => setStrating()}>start</button> */}
           <div className="waiting">
             <img src={book} alt="" className="runningbook" />
             <p className="bepatient">
@@ -134,10 +133,12 @@ const PrivateRoom = ({ socket }) => {
             <img src={marvel} alt="" className="deadpool" />
 
             <p className="parap">
-              Players in room :{" "}
-              {username !== null && `${username.length}/${maxParticipants}`}
+              Players in room :
+              {username !== null && ` ${username.length}/${maxParticipants}`}
             </p>
-            <div className="scroll">{usernames}</div>
+            <div className="scroll">
+              <div className="usernameP"> {usernames} </div>
+            </div>
           </div>
         </>
       )}
