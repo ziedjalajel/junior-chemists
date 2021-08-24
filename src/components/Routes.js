@@ -7,7 +7,6 @@ import Explosion from "./Experiments/NaExp";
 import Result from "./Results/Result";
 import Room from "./Questions/Room";
 import Team from "./Teams/Team";
-import Test from "./Teams/Test";
 import Home from "./Home/Home";
 import Soap from "./Experiments/SoapExp";
 import PrivateRoom from "./Questions/PrivateRoom";
@@ -18,17 +17,17 @@ import PrivateResult from "./Results/PrivateResult";
 const Routes = ({ socket }) => {
   return (
     <Switch>
-      <Route path="/test">
-        <Test />
+      <Route path="/privateroom-username/:roomSlug/private-room/room-result">
+        <PrivateResult socket={socket} />
+      </Route>
+      <Route path="/privateroom-username/:roomSlug/private-room">
+        <PrivateRoom socket={socket} />
+      </Route>
+      <Route path="/privateroom-username/:roomSlug">
+        <PrivateUsername socket={socket} />
       </Route>
       <Route path="/rooms">
         <Room socket={socket} />
-      </Route>
-      <Route path="/privateroom-username">
-        <PrivateUsername socket={socket} />
-      </Route>
-      <Route path="/private-room">
-        <PrivateRoom socket={socket} />
       </Route>
       <Route path="/creating-room">
         <PrivateRoomForm socket={socket} />
@@ -44,9 +43,6 @@ const Routes = ({ socket }) => {
       </Route>
       <Route path="/sodium-exp">
         <Explosion />
-      </Route>
-      <Route path="room-result">
-        <PrivateResult />
       </Route>
       <Route path="/results">
         <Result socket={socket} />

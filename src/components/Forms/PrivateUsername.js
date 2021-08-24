@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+
 //styling
 import "./Form.css";
+import "animate.css";
 import Go from "../../images/Picture2.png";
 import book from "../../images/book.jpg";
 import greyarrow from "../../images/greyarrow.png";
@@ -10,15 +12,13 @@ import greyarrow from "../../images/greyarrow.png";
 const PrivateUsername = ({ socket }) => {
   const history = useHistory();
   const [username, setUsername] = useState("");
+  const { roomSlug } = useParams();
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    socket.emit("joinRoom", { username });
-    // socket.on("roomLength", (a) => {
-    //   console.log(a);
-    // });
-    history.push(`/private-room`);
+    socket.emit("createUser", { username, roomSlug });
+    history.push(`/privateroom-username/${roomSlug}/private-room`);
   };
 
   return (
