@@ -75,7 +75,9 @@ const Questions = ({ socket }) => {
   if (!question) return <div></div>;
 
   if (username !== null)
-    usernames = username.map((user) => <Username user={user} />);
+    usernames = username.map((user) => (
+      <Username user={user} key={user} username={myUser.username} />
+    ));
 
   return (
     <>

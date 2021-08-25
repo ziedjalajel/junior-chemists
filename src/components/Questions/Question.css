@@ -193,3 +193,9 @@ input[type="radio"]:checked:after {
   font-size: 35px;
   padding-bottom: 9%;
 }
+.me {
+  color: red;
+}
+.you {
+  color: black;
+}

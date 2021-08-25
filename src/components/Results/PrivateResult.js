@@ -52,7 +52,9 @@ const PrivateResult = ({ socket }) => {
     return b.score - a.score;
   });
 
-  everyUser = sortByScore.map((user) => <UserScores user={user} />);
+  everyUser = sortByScore.map((user) => (
+    <UserScores user={user} key={user.username} />
+  ));
 
   return (
     <>

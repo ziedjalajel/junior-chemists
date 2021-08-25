@@ -32,15 +32,16 @@ const UsernameForm = ({ socket }) => {
           <h1>Enter your Username :</h1>
           <input
             type="text"
-            placeholder="..."
+            placeholder="Enter your username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-
-        <div className="vector" type="button">
-          <img src={Go} onClick={handleSubmit} alt="" />
-        </div>
+        {username !== "" && (
+          <div className="vector" type="button">
+            <img src={Go} onClick={handleSubmit} alt="" />
+          </div>
+        )}
       </div>
     </div>
   );

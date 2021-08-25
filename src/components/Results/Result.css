@@ -8,12 +8,12 @@
 }
 .first {
   position: absolute;
-  width: 300px;
+  width: 400px;
   height: 320px;
   background: rgba(255, 255, 255, 0.4);
   color: black;
   top: 35%;
-  left: 40%;
+  left: 36%;
   border-radius: 50px;
   overflow-y: scroll;
 }
@@ -85,5 +85,6 @@
 .relative {
   position: relative;
   display: flex;
-  margin-left: -35px;
+  left: -55px;
+  right: 1%;
 }

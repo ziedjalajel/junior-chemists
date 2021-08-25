@@ -1,6 +1,6 @@
 const QuestionDetail = ({ questions, answers, setAnswers }) => {
   const choice = questions.choices.map((c) => (
-    <div className="form-check">
+    <div className="form-check" key={c.id}>
       <input
         className="form-check-input"
         type="radio"
@@ -8,6 +8,9 @@ const QuestionDetail = ({ questions, answers, setAnswers }) => {
         value={c.id}
         checked={answers[questions.id] === c.id}
         style={{ backgroundColor: "#A6A6A4" }}
+        onChange={(e) =>
+          setAnswers({ ...answers, [e.target.name]: +e.target.value })
+        }
       />
       <label className="form-check-label"> {c.text}</label>
     </div>
@@ -16,11 +19,7 @@ const QuestionDetail = ({ questions, answers, setAnswers }) => {
     <div>
       <div>
         <p>{questions.text}</p>
-        <div
-          onChange={(e) =>
-            setAnswers({ ...answers, [e.target.name]: +e.target.value })
-          }
-        >
+        <div>
           <br />
           <br />
           <div className="choice">{choice}</div>

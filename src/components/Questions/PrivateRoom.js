@@ -49,11 +49,11 @@ const PrivateRoom = ({ socket }) => {
     socket.on("startPrivateRoom", (u) => {
       setMaxParticipants(u.privateRoom.participant);
       setUsersId(u.usersIds);
-      console.log(u.usersIds);
+      // console.log(u.usersIds);
     });
     socket.on("newUserPrivate", (u) => {
       setmyUser(u);
-      console.log(u);
+      console.log("this is u :", u);
     });
     socket.on("startPrivateRoom", (a) => {
       setNumberOfUsers(a.users.length);
@@ -84,12 +84,12 @@ const PrivateRoom = ({ socket }) => {
         );
         socket.emit("myAnswersPrivate", myAnswers);
         console.log(myAnswers);
-        {
-          numberOfUsers === maxParticipants &&
-            history.push(
-              `/privateroom-username/${roomSlug}/private-room/room-result`
-            );
-        }
+        // {
+        //   numberOfUsers === maxParticipants &&
+        history.push(
+          `/privateroom-username/${roomSlug}/private-room/room-result`
+        );
+        // }
       }
     }
   }, [seconds, numberOfUsers]);
@@ -100,8 +100,8 @@ const PrivateRoom = ({ socket }) => {
   if (!question) return <div></div>;
 
   if (username !== null)
-    usernames = username.map((user) => <Username user={user} />);
-
+    usernames = username.map((user) => <Username user={user} key={user} />);
+  console.log("meme", usernames);
   return (
     <>
       {numberOfUsers === maxParticipants ? (
