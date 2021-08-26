@@ -55,6 +55,7 @@ const PrivateRoom = ({ socket }) => {
       setmyUser(u);
       console.log("this is u :", u);
     });
+
     socket.on("startPrivateRoom", (a) => {
       setNumberOfUsers(a.users.length);
     });
@@ -100,8 +101,10 @@ const PrivateRoom = ({ socket }) => {
   if (!question) return <div></div>;
 
   if (username !== null)
-    usernames = username.map((user) => <Username user={user} key={user} />);
-  console.log("meme", usernames);
+    usernames = username.map((user) => (
+      <Username user={user} key={user} username={myUser.username} />
+    ));
+
   return (
     <>
       {numberOfUsers === maxParticipants ? (
