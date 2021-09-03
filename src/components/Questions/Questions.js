@@ -11,7 +11,7 @@ import book from "../../images/book.jpg";
 
 const Questions = ({ socket }) => {
   const questions = useSelector((state) => state.questionReducer.questions);
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(20);
   const [question, setQuestion] = useState(null);
   const [answers, setAnswers] = useState({});
   const dispatch = useDispatch();

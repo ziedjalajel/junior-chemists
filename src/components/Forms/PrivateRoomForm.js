@@ -9,6 +9,7 @@ import greyarrow from "../../images/greyarrow.png";
 import Swal from "sweetalert2";
 
 const PrivateRoomForm = ({ socket }) => {
+  console.log(socket.id);
   const history = useHistory();
   const [team, setTeam] = useState({ name: "", participant: 2 });
 
