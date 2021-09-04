@@ -18,7 +18,7 @@ function App() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("localhost:8000"));
+    setSocket(io("https://junior-chemists-be-bl7l7.ondigitalocean.app/"));
   }, []);
   useEffect(() => {
     if (socket) {
